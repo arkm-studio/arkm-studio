@@ -18,7 +18,7 @@
         }
       ],
       "liveUrl": "https://supremebarfcanine.com",
-      "githubUrl": "https://github.com/kap-94/Supreme-BARF-Canine"
+      "githubUrl": "https://github.com/kap-94/supreme-barf-canine"
     },
     {
       "id": "arkm-suite",
@@ -39,8 +39,8 @@
           "alt": "Gantt timeline view showing project stages and dependencies"
         }
       ],
-      "liveUrl": "https://www.pablokaram.com/en/dashboard",
-      "githubUrl": "https://github.com/arkm-studio/arkm-studio"
+      "liveUrl": "https://arkm-suite.vercel.app",
+      "githubUrl": "https://github.com/kap-94/arkm-suite"
     },
     {
       "id": "trvlr-travel-platform",
@@ -61,7 +61,7 @@
           "alt": "Why Travel page with inspirational content and reasons to travel around the world"
         }
       ],
-      "liveUrl": "https://trvlr-xi.vercel.app/",
+      "liveUrl": "https://trvlr-xi.vercel.app",
       "githubUrl": "https://github.com/kap-94/trvlr"
     }
   ]
