@@ -137,8 +137,6 @@ export const MenuList: React.FC<MenuListProps> = ({
    * @param hasSubmenu - Whether the item has a submenu
    * @param menuItemId - ID of the menu item
    */
-  ("use client");
-
   const handleMenuClick = useCallback(
     (
       e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
