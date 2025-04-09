@@ -6,7 +6,15 @@
       "id": "supreme-barf-canine",
       "title": "Supreme BARF Canine E-commerce",
       "description": "E-commerce especializado en alimentos naturales para perros, con interfaz intuitiva, calculadora de porciones y sistema de paquetes con descuentos. Diseñado para proporcionar una experiencia de compra fluida a propietarios de mascotas.",
-      "technologies": ["React", "Next.js", "TypeScript", "SASS", "GSAP", "Formik", "Shopify API"],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "SASS",
+        "GSAP",
+        "Formik",
+        "Shopify API"
+      ],
       "images": [
         {
           "src": "/images/portfolio/supreme-barf-hero.png",
@@ -18,13 +26,21 @@
         }
       ],
       "liveUrl": "https://supremebarfcanine.com",
-      "githubUrl": "https://github.com/kap-94/Supreme-BARF-Canine"
+      "githubUrl": "https://github.com/kap-94/supreme-barf-canine"
     },
     {
       "id": "arkm-suite",
       "title": "ARKM Suite",
       "description": "Portal centralizado para gestión de proyectos con dashboard interactivo, seguimiento detallado de progreso mediante líneas de tiempo Gantt y sistema completo de entregables, optimizado para mejorar la comunicación entre equipos y clientes.",
-      "technologies": ["React", "TypeScript", "Next.js", "SASS", "RESTful API", "Supabase", "Next Auth Access Control"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "SASS",
+        "RESTful API",
+        "Supabase",
+        "Next Auth Access Control"
+      ],
       "images": [
         {
           "src": "/images/portfolio/arkm-signin.png",
@@ -39,14 +55,23 @@
           "alt": "Vista de cronograma Gantt mostrando las etapas del proyecto y dependencias"
         }
       ],
-      "liveUrl": "https://www.pablokaram.com/es/dashboard",
-      "githubUrl": "https://github.com/arkm-studio/arkm-studio"
+      "liveUrl": "https://arkm-suite.vercel.app",
+      "githubUrl": "https://github.com/kap-94/arkm-suite"
     },
     {
       "id": "trvlr-travel-platform",
       "title": "TRVLR",
       "description": "Web de viajes moderna con búsqueda de destinos, guías y blogs. Permite a los usuarios explorar destinos increíbles, planificar itinerarios y descubrir recomendaciones locales con una interfaz visualmente atractiva.",
-      "technologies": ["React", "Next.js", "TypeScript", "SASS", "Leaflet", "GSAP", "React Slick", "React Datepicker"],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "SASS",
+        "Leaflet",
+        "GSAP",
+        "React Slick",
+        "React Datepicker"
+      ],
       "images": [
         {
           "src": "/images/portfolio/trvlr-hero.png",
@@ -61,7 +86,7 @@
           "alt": "Página Why Travel con contenido inspiracional y razones para viajar alrededor del mundo"
         }
       ],
-      "liveUrl": "https://trvlr-xi.vercel.app/",
+      "liveUrl": "https://trvlr-xi.vercel.app",
       "githubUrl": "https://github.com/kap-94/trvlr"
     }
   ]
