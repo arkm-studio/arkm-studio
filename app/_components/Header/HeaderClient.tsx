@@ -155,7 +155,7 @@ const HeaderClient: React.FC<HeaderProps> = ({
             {/* Desktop Menu */}
             <div className={cx("header__menu-group", "header__desktop-menu")}>
               <MenuList
-                frontPageID={language || 1}
+                // frontPageID={language || 1}
                 data={primaryNavigationItems}
                 onClick={handleMenuClick}
                 useActiveStyle
@@ -184,7 +184,7 @@ const HeaderClient: React.FC<HeaderProps> = ({
               className={cx("header__actions-group", "header__desktop-actions")}
             >
               <MenuList
-                frontPageID={language || 1}
+                // frontPageID={language || 1}
                 data={secondaryNavigationItems}
                 onClick={handleMenuClick}
                 useActiveStyle
