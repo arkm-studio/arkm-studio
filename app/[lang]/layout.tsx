@@ -1,26 +1,11 @@
-// src/app/[lang]/layout.tsx
-import type { Metadata } from "next";
-import { languages, type Language } from "../_lib/config/i18n";
-import { LanguageProvider } from "../_context/LanguageContext";
-import { inter } from "../_lib/fonts";
-import GoogleAnalytics from "../_components/GoogleAnalytics";
-import "@/app/_styles/globals.scss";
+import { languages, type Language } from "@/app/_lib/config/i18n";
+import { LanguageProvider } from "@/app/_context/LanguageContext";
 
 export async function generateStaticParams() {
   return languages.map((lang) => ({ lang }));
 }
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s - ARKM Studio",
-    default: "ARKM Studio",
-  },
-  authors: [{ name: "ARKM Studio" }],
-  creator: "ARKM Studio",
-  publisher: "ARKM Studio",
-};
-
-export default async function RootLayout({
+export default async function LangLayout({
   children,
   params: { lang },
 }: {
@@ -31,19 +16,5 @@ export default async function RootLayout({
     ? (lang as Language)
     : "en";
 
-  return (
-    <html lang={validLang}>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://use.typekit.net/mke4enw.css"
-          // as="style"
-        />
-        <GoogleAnalytics />
-      </head>
-      <body className={inter.className}>
-        <LanguageProvider lang={validLang}>{children}</LanguageProvider>
-      </body>
-    </html>
-  );
+  return <LanguageProvider lang={validLang}>{children}</LanguageProvider>;
 }

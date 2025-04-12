@@ -35,14 +35,6 @@ export async function generateMetadata({
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
-    authors: meta.authors,
-    creator: meta.creator,
-    publisher: meta.publisher,
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      type: "website",
-    },
   };
 }
 
