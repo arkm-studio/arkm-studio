@@ -13,8 +13,12 @@
     margin-bottom: 88px;
   }
 
+  @include mobile {
+    height: 92vh;
+  }
+
   @include mobile-small {
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 
   &__content {
@@ -26,7 +30,6 @@
     padding-bottom: $spacing-lg;
 
     @include mobile {
-      height: 100vh;
       padding-bottom: $spacing-md;
       @include flex(column, flex-start, center);
     }
@@ -78,6 +81,7 @@
     }
 
     @include mobile-small {
+      max-width: 90%;
       gap: 20px;
     }
 
@@ -89,18 +93,14 @@
 
       @include mobile {
         font-size: clamp(24px, 4.5vw, 52px);
-        // max-width: 90%;
       }
 
       @include mobile-medium {
-        // max-width: 18rem;
         line-height: 1.27;
-        font-size: clamp(20px, 3.5vh, 42px);
       }
 
       @include mobile-small {
-        font-size: clamp(20px, 4vw, 36px);
-        // max-width: 90%;
+        font-size: clamp(22px, 3.5vw, 42px);
       }
     }
 
@@ -155,7 +155,7 @@
     gap: $spacing-xs;
 
     @include mobile {
-      margin-top: auto; // Push to the bottom
+      margin-top: 88px;
     }
 
     &-text {
