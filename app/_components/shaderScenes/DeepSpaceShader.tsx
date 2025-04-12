@@ -9,6 +9,7 @@ import React, {
   useState,
   ReactNode,
   memo,
+  useCallback,
 } from "react";
 import {
   Canvas,
@@ -407,77 +408,25 @@ function MeshWithOverlay({ children }: { children: ReactNode }) {
   return <group>{children}</group>;
 }
 
-function FloatingDeepSpace({ isMobile }: { isMobile: boolean }) {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const matRef = useRef<DeepSpaceMaterialImpl>(null);
-  const { mouse, viewport, size } = useThree();
-
-  // Inicializar controlador
-  useEffect(() => {
-    if (!matRef.current) return;
-
-    // Solo aplicar la animación inicial si no es móvil
-    if (!isMobile) {
-      gsap.from(matRef.current, {
-        uDistortionStrength: 0,
-        duration: 1.5,
-        ease: "power2.out",
-      });
-    }
-
-    deepSpaceController.init(meshRef, matRef, isMobile);
-
-    return () => {
-      deepSpaceController.destroy();
-    };
-  }, [isMobile]);
-
-  // Frame loop - solo aplicar actualizaciones si no es móvil
-  useFrame(({ clock }) => {
-    if (matRef.current && !isMobile) {
-      matRef.current.uTime = clock.getElapsedTime() * 0.5; // Movimiento más lento para profesionalismo
-      matRef.current.uMouse.set(mouse.x * 0.5 + 0.5, -mouse.y * 0.5 + 0.5);
-    }
-  });
-
-  // Geometría con menos segmentos para rendimiento
-  const geometry = useMemo(() => new THREE.PlaneGeometry(3, 2, 10, 10), []);
-  const baseScale = isMobile ? 0.75 : 0.4;
-  const responsiveScale = Math.min(1, size.width / 1200) * baseScale;
-  const yOffset = viewport.height / 2 - (2 * responsiveScale) / 2;
-
-  // Cargar textura
-  const [texture] = useLoader(THREE.TextureLoader, [
-    "/images/home/gradient.jpg",
-  ]);
-  return (
-    <MeshWithOverlay>
-      <mesh
-        ref={meshRef}
-        scale={[responsiveScale, responsiveScale, responsiveScale]}
-        position={[0, yOffset, 0]}
-      >
-        <primitive object={geometry} attach="geometry" />
-        <deepSpaceMaterial
-          ref={matRef}
-          uTexture={texture}
-          uDisableAnimation={isMobile}
-          transparent
-          side={THREE.DoubleSide}
-        />
-      </mesh>
-    </MeshWithOverlay>
-  );
-}
-
 function DeepSpace() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [meshDimensions, setMeshDimensions] = useState({ top: 0, height: 0 });
 
-  // Detectar móvil
+  // Detectar tablet
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    const checkTablet = () => setIsTablet(window.innerWidth <= 1024);
+    checkTablet();
+    window.addEventListener("resize", checkTablet);
+    return () => window.removeEventListener("resize", checkTablet);
+  }, []);
+
+  // Detectar móvil específicamente para la cámara
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const checkMobile = () => setIsMobile(window.innerWidth <= 640);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -489,9 +438,17 @@ function DeepSpace() {
     gsap.fromTo(
       containerRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.2, ease: "power2.out" } // Fade in más lento para profesionalismo
+      { opacity: 1, duration: 1.2, ease: "power2.out" }
     );
   }, []);
+
+  // Callback para recibir dimensiones del mesh desde FloatingDeepSpace
+  const updateMeshDimensions = useCallback(
+    (dimensions: { top: number; height: number }) => {
+      setMeshDimensions(dimensions);
+    },
+    []
+  );
 
   return (
     <div ref={containerRef} className={cx("container")}>
@@ -499,12 +456,12 @@ function DeepSpace() {
         style={{ width: "100%", height: "100%" }}
         gl={{
           alpha: true,
-          antialias: true, // Siempre antialias para look profesional
+          antialias: true,
           preserveDrawingBuffer: false,
           powerPreference: "high-performance",
-          precision: isMobile ? "mediump" : "highp",
+          precision: isTablet ? "mediump" : "highp",
         }}
-        dpr={[1, isMobile ? 1.5 : 2]}
+        dpr={[1, isTablet ? 1.5 : 2]}
         camera={{
           position: [0, 0, isMobile ? 3 : 2.5],
           fov: isMobile ? 35 : 30,
@@ -515,10 +472,114 @@ function DeepSpace() {
       >
         <ambientLight intensity={0.4} />
         <Suspense fallback={null}>
-          <FloatingDeepSpace isMobile={isMobile} />
+          <FloatingDeepSpace
+            isTablet={isTablet}
+            isMobile={isMobile}
+            onMeshUpdate={updateMeshDimensions}
+          />
         </Suspense>
       </Canvas>
+
+      {/* Gradient overlay posicionado encima de la textura */}
+      {isTablet && meshDimensions.height > 0 && (
+        <div
+          className={cx("image-gradient-overlay")}
+          style={{
+            top: `${meshDimensions.top}%`,
+            height: `${meshDimensions.height}%`,
+          }}
+        ></div>
+      )}
     </div>
+  );
+}
+
+function FloatingDeepSpace({
+  isTablet,
+  isMobile,
+  onMeshUpdate,
+}: {
+  isTablet: boolean;
+  isMobile: boolean;
+  onMeshUpdate: (dimensions: { top: number; height: number }) => void;
+}) {
+  const meshRef = useRef<THREE.Mesh>(null);
+  const matRef = useRef<DeepSpaceMaterialImpl>(null);
+  const { mouse, viewport, size } = useThree();
+
+  // Geometría y dimensiones
+  const geometry = useMemo(() => new THREE.PlaneGeometry(3, 2, 10, 10), []);
+  const baseScale = isMobile ? 0.9 : 0.4;
+  const responsiveScale = Math.min(1, size.width / 1200) * baseScale;
+  const yOffset = viewport.height / 2 - (2 * responsiveScale) / 2;
+
+  // Calcular y reportar dimensiones para el overlay
+  useEffect(() => {
+    if (!meshRef.current) return;
+
+    // Convertir posición y escala 3D a porcentaje de pantalla para el overlay DOM
+    const meshHeight = 2 * responsiveScale; // height of plane * scale
+    const viewportHeightPercent = (meshHeight / viewport.height) * 100;
+
+    // Calcular la posición top como porcentaje
+    const topPositionPercent =
+      50 - (yOffset / viewport.height) * 100 - viewportHeightPercent / 2;
+
+    onMeshUpdate({
+      top: topPositionPercent,
+      height: viewportHeightPercent,
+    });
+  }, [viewport, responsiveScale, yOffset, onMeshUpdate]);
+
+  // Inicializar controlador
+  useEffect(() => {
+    if (!matRef.current) return;
+
+    if (!isTablet) {
+      gsap.from(matRef.current, {
+        uDistortionStrength: 0,
+        duration: 1.5,
+        ease: "power2.out",
+      });
+    }
+
+    deepSpaceController.init(meshRef, matRef, isTablet);
+
+    return () => {
+      deepSpaceController.destroy();
+    };
+  }, [isTablet]);
+
+  // Frame loop
+  useFrame(({ clock }) => {
+    if (matRef.current && !isTablet) {
+      matRef.current.uTime = clock.getElapsedTime() * 0.5;
+      matRef.current.uMouse.set(mouse.x * 0.5 + 0.5, -mouse.y * 0.5 + 0.5);
+    }
+  });
+
+  // Cargar textura
+  const [texture] = useLoader(THREE.TextureLoader, [
+    "/images/home/gradient.jpg",
+  ]);
+
+  return (
+    <MeshWithOverlay>
+      <mesh
+        ref={meshRef}
+        scale={[responsiveScale, responsiveScale, responsiveScale]}
+        position={[0, yOffset, 0]}
+      >
+        <primitive object={geometry} attach="geometry" />
+        <deepSpaceMaterial
+          ref={matRef}
+          uTexture={texture}
+          uDisableAnimation={isTablet}
+          transparent
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+    </MeshWithOverlay>
   );
 }
 
