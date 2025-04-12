@@ -31,10 +31,35 @@ export async function generateMetadata({
     lang
   );
   const meta = dictionary.meta;
+
   return {
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
+    // OpenGraph metadata
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `https://www.pablokaram.com/${lang}`,
+      siteName: "Pablo Karam",
+      locale: lang === "es" ? "es_ES" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: "/opengraph-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Pablo Karam",
+        },
+      ],
+    },
+    // Twitter metadata
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: ["/opengraph-image.png"],
+    },
   };
 }
 
