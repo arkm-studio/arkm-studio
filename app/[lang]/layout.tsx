@@ -11,7 +11,6 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"), // Add your domain
   title: {
     template: "%s - ARKM Studio",
     default: "ARKM Studio",
