@@ -39,7 +39,134 @@ const COLORS = {
   accent: "#3B82F6", // Azul para acentos sutiles
 };
 
-// VERTEX SHADER PROFESIONAL Y SUTIL
+// // VERTEX SHADER PROFESIONAL Y SUTIL
+// const vertexShader = `
+//   uniform float uTime;
+//   uniform float uScrollProgress;
+//   uniform vec2 uMouse;
+//   uniform float uDistortionFrequency;
+//   uniform float uDistortionStrength;
+//   uniform float uDepthOffset;
+//   uniform bool uDisableAnimation;
+
+//   varying vec2 vUv;
+//   varying float vElevation;
+//   varying float vDistortion;
+
+//   // Función de ruido sutil optimizada
+//   float noise(vec2 p) {
+//     return sin(p.x * 0.5 + p.y * 0.5 + uTime * 0.5) *
+//            cos(p.x * 0.4 + p.y * 0.3 + uTime * 0.3) * 0.1;
+//   }
+
+//   void main() {
+//     vUv = uv;
+
+//     // Posición base
+//     vec3 pos = position;
+
+//     // Solo aplicar efectos si las animaciones están habilitadas
+//     if (!uDisableAnimation) {
+//       // Distorsión sutil basada en ruido
+//       float distortion = noise(pos.xy * uDistortionFrequency) * uDistortionStrength;
+
+//       // Reducir distorsión gradualmente con scroll
+//       distortion *= (1.0 - uScrollProgress * 0.8);
+
+//       // Aplicar distorsión sutil
+//       pos.z += distortion;
+
+//       // Descenso suave con aceleración controlada
+//       float descent = pow(uScrollProgress, 1.2) * 1.5;
+
+//       // Aplicar descenso y ligero desplazamiento en profundidad
+//       pos.y -= descent;
+//       pos.z += uScrollProgress * uDepthOffset;
+
+//       // Ligera inclinación basada en scroll
+//       float tiltAngle = uScrollProgress * 0.15;
+//       pos.z -= sin(tiltAngle) * 0.1;
+
+//       // Variables para fragment shader
+//       vElevation = distortion;
+//       vDistortion = abs(distortion) * 5.0;
+//     } else {
+//       // Sin animación, valores por defecto
+//       vElevation = 0.0;
+//       vDistortion = 0.0;
+//     }
+
+//     gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+//   }
+// `;
+
+// // FRAGMENT SHADER PROFESIONAL Y SUTIL
+// const fragmentShader = `
+//   uniform vec3 uColor;
+//   uniform vec3 uSecondaryColor;
+//   uniform vec3 uAccentColor;
+//   uniform float uTime;
+//   uniform sampler2D uTexture;
+//   uniform float uColorBalance;
+//   uniform float uScrollProgress;
+//   uniform float uSharpenStrength;
+//   uniform float uVignetteIntensity;
+//   uniform bool uDisableAnimation;
+
+//   varying vec2 vUv;
+//   varying float vElevation;
+//   varying float vDistortion;
+
+//   void main() {
+//     // UVs con ligero desplazamiento basado en distorsión
+//     vec2 adjustedUV = vUv;
+
+//     if (!uDisableAnimation) {
+//       adjustedUV.x += vDistortion * 0.01 * (1.0 - uScrollProgress * 0.5);
+//     }
+
+//     // Color base desde textura
+//     vec4 texColor = texture2D(uTexture, adjustedUV);
+//     vec3 color = texColor.rgb;
+
+//     if (!uDisableAnimation) {
+//       // Filtro de nitidez sutil
+//       float sharpStrength = uSharpenStrength * (1.0 + uScrollProgress * 0.5);
+//       vec3 blurred = (
+//         texture2D(uTexture, adjustedUV + vec2(0.001, 0.001)).rgb +
+//         texture2D(uTexture, adjustedUV + vec2(-0.001, 0.001)).rgb +
+//         texture2D(uTexture, adjustedUV + vec2(0.001, -0.001)).rgb +
+//         texture2D(uTexture, adjustedUV + vec2(-0.001, -0.001)).rgb
+//       ) * 0.25;
+//       color += (color - blurred) * sharpStrength;
+
+//       // Balance de color ajustado con scroll
+//       float balance = uColorBalance * (1.0 + uScrollProgress * 0.3);
+//       vec3 colorTint = mix(uColor, uSecondaryColor, uScrollProgress);
+//       color = mix(color, colorTint, balance);
+
+//       // Añadir sutil acento de color basado en elevación
+//       vec3 accentHighlight = uAccentColor * vDistortion * 1.5 * (1.0 - uScrollProgress * 0.7);
+//       color += accentHighlight;
+
+//       // Viñeta profesional que se intensifica sutilmente con scroll
+//       float vignetteStrength = uVignetteIntensity * (1.0 + uScrollProgress * 0.5);
+//       float vignette = smoothstep(0.4 - uScrollProgress * 0.1, 0.0, length(vUv - 0.5));
+//       color = mix(color, vec3(0.02, 0.02, 0.05), (1.0 - vignette) * vignetteStrength);
+
+//       // Ajuste de brillo basado en scroll (oscurecer gradualmente)
+//       color *= max(0.7, 1.0 - uScrollProgress * 0.4);
+//     } else {
+//       // Aplicar una viñeta básica cuando las animaciones están desactivadas
+//       float vignette = smoothstep(0.4, 0.0, length(vUv - 0.5));
+//       color = mix(color, vec3(0.02, 0.02, 0.05), (1.0 - vignette) * uVignetteIntensity);
+//     }
+
+//     gl_FragColor = vec4(color, 1.0);
+//   }
+// `;
+
+// VERTEX SHADER: ONDAS FLUIDAS
 const vertexShader = `
   uniform float uTime;
   uniform float uScrollProgress;
@@ -52,46 +179,59 @@ const vertexShader = `
   varying vec2 vUv;
   varying float vElevation;
   varying float vDistortion;
+  varying vec3 vNormal;
 
-  // Función de ruido sutil optimizada
+  // Función de ruido Perlin simplificada para ondas orgánicas
   float noise(vec2 p) {
-    return sin(p.x * 0.5 + p.y * 0.5 + uTime * 0.5) * 
-           cos(p.x * 0.4 + p.y * 0.3 + uTime * 0.3) * 0.1;
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    vec2 u = f * f * (3.0 - 2.0 * f); // Suavizado cúbico
+    
+    float a = sin(i.x + i.y * 0.57 + uTime * 0.2) * 0.5 + 0.5;
+    float b = sin((i.x + 1.0) + i.y * 0.57 + uTime * 0.2) * 0.5 + 0.5;
+    float c = sin(i.x + (i.y + 1.0) * 0.57 + uTime * 0.2) * 0.5 + 0.5;
+    float d = sin((i.x + 1.0) + (i.y + 1.0) * 0.57 + uTime * 0.2) * 0.5 + 0.5;
+    
+    return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
   }
 
   void main() {
     vUv = uv;
+    vNormal = normal;
     
     // Posición base
     vec3 pos = position;
     
     // Solo aplicar efectos si las animaciones están habilitadas
     if (!uDisableAnimation) {
-      // Distorsión sutil basada en ruido
-      float distortion = noise(pos.xy * uDistortionFrequency) * uDistortionStrength;
+      // Crear ondas fluidas basadas en el tiempo
+      float waveX = sin(uv.x * 5.0 + uTime * 0.5) * 0.02;
+      float waveY = cos(uv.y * 4.0 + uTime * 0.4) * 0.02;
       
-      // Reducir distorsión gradualmente con scroll
-      distortion *= (1.0 - uScrollProgress * 0.8);
+      // Distorsión orgánica
+      float wave = noise(pos.xy * uDistortionFrequency + uTime * 0.1) * uDistortionStrength;
       
-      // Aplicar distorsión sutil
-      pos.z += distortion;
+      // Disminuir efecto con scroll
+      wave *= (1.0 - uScrollProgress * 0.7);
+      waveX *= (1.0 - uScrollProgress * 0.8);
+      waveY *= (1.0 - uScrollProgress * 0.8);
       
-      // Descenso suave con aceleración controlada
-      float descent = pow(uScrollProgress, 1.2) * 1.5;
+      // Aplicar ondas al eje Z
+      pos.z += wave + waveX + waveY;
       
-      // Aplicar descenso y ligero desplazamiento en profundidad
+      // Desplazamiento suave con scroll
+      float descent = pow(uScrollProgress, 1.3) * 1.5;
       pos.y -= descent;
       pos.z += uScrollProgress * uDepthOffset;
       
-      // Ligera inclinación basada en scroll
-      float tiltAngle = uScrollProgress * 0.15;
+      // Leve inclinación
+      float tiltAngle = uScrollProgress * 0.12;
       pos.z -= sin(tiltAngle) * 0.1;
       
       // Variables para fragment shader
-      vElevation = distortion;
-      vDistortion = abs(distortion) * 5.0;
+      vElevation = wave + waveX + waveY;
+      vDistortion = abs(wave) * 6.0;
     } else {
-      // Sin animación, valores por defecto
       vElevation = 0.0;
       vDistortion = 0.0;
     }
@@ -100,7 +240,7 @@ const vertexShader = `
   }
 `;
 
-// FRAGMENT SHADER PROFESIONAL Y SUTIL
+// FRAGMENT SHADER: ONDAS FLUIDAS
 const fragmentShader = `
   uniform vec3 uColor;
   uniform vec3 uSecondaryColor;
@@ -116,13 +256,16 @@ const fragmentShader = `
   varying vec2 vUv;
   varying float vElevation;
   varying float vDistortion;
+  varying vec3 vNormal;
 
   void main() {
-    // UVs con ligero desplazamiento basado en distorsión
+    // UV perturbado para efecto fluido
     vec2 adjustedUV = vUv;
     
     if (!uDisableAnimation) {
-      adjustedUV.x += vDistortion * 0.01 * (1.0 - uScrollProgress * 0.5);
+      float disturbance = sin(vUv.y * 10.0 + uTime * 0.3) * 0.002 * (1.0 - uScrollProgress);
+      adjustedUV.x += disturbance + vDistortion * 0.01;
+      adjustedUV.y += vDistortion * 0.005;
     }
     
     // Color base desde textura
@@ -130,8 +273,8 @@ const fragmentShader = `
     vec3 color = texColor.rgb;
     
     if (!uDisableAnimation) {
-      // Filtro de nitidez sutil 
-      float sharpStrength = uSharpenStrength * (1.0 + uScrollProgress * 0.5);
+      // Mejora de detalle con nitidez
+      float sharpStrength = uSharpenStrength * (1.0 + uScrollProgress * 0.4);
       vec3 blurred = (
         texture2D(uTexture, adjustedUV + vec2(0.001, 0.001)).rgb + 
         texture2D(uTexture, adjustedUV + vec2(-0.001, 0.001)).rgb + 
@@ -140,26 +283,32 @@ const fragmentShader = `
       ) * 0.25;
       color += (color - blurred) * sharpStrength;
       
-      // Balance de color ajustado con scroll
-      float balance = uColorBalance * (1.0 + uScrollProgress * 0.3);
+      // Transición de color suave basada en scroll
+      float balance = uColorBalance * (1.0 + uScrollProgress * 0.4);
       vec3 colorTint = mix(uColor, uSecondaryColor, uScrollProgress);
       color = mix(color, colorTint, balance);
       
-      // Añadir sutil acento de color basado en elevación
-      vec3 accentHighlight = uAccentColor * vDistortion * 1.5 * (1.0 - uScrollProgress * 0.7);
-      color += accentHighlight;
+      // Iluminación suave basada en distorsión
+      vec3 light = normalize(vec3(0.5, 0.5, 1.0));
+      float diffuse = 0.5 + max(0.0, dot(vNormal, light)) * 0.5;
+      color *= 0.9 + diffuse * 0.2 * (1.0 - uScrollProgress * 0.5);
       
-      // Viñeta profesional que se intensifica sutilmente con scroll
-      float vignetteStrength = uVignetteIntensity * (1.0 + uScrollProgress * 0.5);
-      float vignette = smoothstep(0.4 - uScrollProgress * 0.1, 0.0, length(vUv - 0.5));
-      color = mix(color, vec3(0.02, 0.02, 0.05), (1.0 - vignette) * vignetteStrength);
+      // Destellos de acento sutiles
+      float highlight = smoothstep(0.5, 0.8, vDistortion);
+      highlight *= (sin(uTime * 0.5) * 0.5 + 0.5) * (1.0 - uScrollProgress * 0.7);
+      color = mix(color, uAccentColor, highlight * 0.1);
       
-      // Ajuste de brillo basado en scroll (oscurecer gradualmente)
-      color *= max(0.7, 1.0 - uScrollProgress * 0.4);
+      // Viñeta refinada
+      float vignetteStrength = uVignetteIntensity * (1.0 + uScrollProgress * 0.4);
+      float vignette = smoothstep(0.5 - uScrollProgress * 0.15, 0.0, length(vUv - 0.5));
+      color = mix(color, vec3(0.02, 0.03, 0.06), (1.0 - vignette) * vignetteStrength);
+      
+      // Ajuste de brillo
+      color *= max(0.8, 1.0 - uScrollProgress * 0.35);
     } else {
-      // Aplicar una viñeta básica cuando las animaciones están desactivadas
-      float vignette = smoothstep(0.4, 0.0, length(vUv - 0.5));
-      color = mix(color, vec3(0.02, 0.02, 0.05), (1.0 - vignette) * uVignetteIntensity);
+      // Viñeta básica para modo desactivado
+      float vignette = smoothstep(0.5, 0.0, length(vUv - 0.5));
+      color = mix(color, vec3(0.02, 0.03, 0.06), (1.0 - vignette) * uVignetteIntensity * 0.8);
     }
     
     gl_FragColor = vec4(color, 1.0);

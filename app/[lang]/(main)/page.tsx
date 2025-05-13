@@ -5,6 +5,7 @@ import {
   getPageDictionary,
   homeDictionary,
   mainLayoutDictionary,
+  portfolioDictionary,
 } from "@/app/_utils/dictionary";
 import { HomeDictionary } from "@/app/_types/dictionary/home.types";
 import { UIProvider } from "@/app/_context/UIContext";
@@ -14,10 +15,15 @@ import ShaderBackground from "@/app/_modules/ShaderBackground";
 import MethodologyPreview from "@/app/_modules/MethodologyPreview";
 import WorkExperienceSection from "@/app/_modules/WorkExperience";
 import ContactSection from "@/app/_modules/ContactSection";
+import ProjectCarousel from "@/app/_components/ProjectCarousel"; // Importamos el componente
 import Snackbar from "@/app/_components/Snackbar";
 import GlowBackground from "@/app/_components/GlowBackground";
 import styles from "./page.module.scss";
 import { MainLayoutDictionary } from "@/app/_types/dictionary/mainLayout.types";
+import {
+  PortfolioDictionary,
+  ProjectImage,
+} from "@/app/_types/dictionary/portfolio.types";
 
 const cx = classNames.bind(styles);
 
@@ -48,11 +54,42 @@ export default async function Home({
     lang
   );
 
+  const portfolioDict = await getPageDictionary<PortfolioDictionary>(
+    portfolioDictionary,
+    lang
+  );
+
   // Get main layout dictionary for contact section
   const mainLayoutDict = await getPageDictionary<MainLayoutDictionary>(
     mainLayoutDictionary,
     lang
   );
+
+  // Formatear los datos para el componente de proyectos correctamente
+  const projectsData = portfolioDict.projects.map((project) => {
+    // Helper function to extract image src safely
+    const getImageSrc = (image: string | ProjectImage | undefined): string => {
+      if (!image) return "/images/placeholder-project.jpg";
+
+      // If it's already a string, return it
+      if (typeof image === "string") return image;
+
+      // If it's a ProjectImage object, extract the src
+      if (typeof image === "object" && "src" in image) return image.src;
+
+      // Fallback
+      return "/images/placeholder-project.jpg";
+    };
+
+    return {
+      id: project.id,
+      title: project.title,
+      featured_image: getImageSrc(project.images?.[0]),
+      slug: project.id,
+      client: project.client,
+      projectType: project.projectType,
+    };
+  });
 
   return (
     <UIProvider>
@@ -69,6 +106,17 @@ export default async function Home({
         </ShaderBackground>
 
         <GlowBackground variant="nebula">
+          {/* Componente de carrusel */}
+          <ProjectCarousel
+            title={portfolioDict.title || "Success Stories"}
+            subtitle={
+              portfolioDict.subtitle ||
+              "OUR PORTFOLIO SPEAKS LOUDER THAN WORDS. IT'S A SHOWCASE OF SUCCESS STORIES, A TESTAMENT TO OUR COLLABORATIVE APPROACH, AND A PREVIEW OF WHAT WE CAN BRING TO YOUR DIGITAL TABLE."
+            }
+            projects={projectsData}
+            customAnchorId="portfolio"
+          />
+
           <MethodologyPreview
             dictionary={dictionary.methodology}
             customAnchorId="method"

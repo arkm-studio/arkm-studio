@@ -1,5 +1,4 @@
-// types/dictionary/portfolio.types.ts
-
+// Update the ProjectData interface to include missing properties
 export interface ProjectImage {
   src: string;
   alt: string;
@@ -8,11 +7,19 @@ export interface ProjectImage {
 export interface ProjectData {
   id: string;
   title: string;
-  description: string;
+  description: string; // Added
+  introText: string; // Added
+  client?: string;
+  projectType?: string;
+  platform?: string;
+  expertise?: string[];
   technologies: string[];
   images: ProjectImage[];
+  whatWeDid?: string[];
+  finalProduct?: string;
   liveUrl?: string;
   githubUrl?: string;
+  labels?: any;
 }
 
 export interface PortfolioDictionary {

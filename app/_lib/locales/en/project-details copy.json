@@ -1,0 +1,279 @@
+{
+    "meta": {
+        "title": "Project Details | Client Portal",
+        "description": "View and manage detailed information about your project",
+        "keywords": [
+            "project details",
+            "timeline",
+            "deliverables",
+            "project management",
+            "gantt"
+        ],
+        "ogImage": "/images/project-details-og.jpg"
+    },
+    "header": {
+        "title": "Project Details",
+        "subtitle": "Track and manage your project's progress",
+        "aria": "Project details main header"
+    },
+    "projectHeader": {
+        "group": {
+            "aria": "Project selector dropdown",
+            "label": "Switch Project"
+        },
+        "progress": {
+            "label": "Progress",
+            "trend": "+5% from last week",
+            "percentage": "{{value}}%"
+        },
+        "owner": {
+            "label": "Owner: {{name}}"
+        },
+        "metrics": {
+            "timeline": {
+                "label": "Timeline",
+                "icon": "Clock",
+                "variant": "info",
+                "tooltip": "Project timeline duration"
+            },
+            "milestones": {
+                "label": "Milestones",
+                "icon": "GitPullRequest",
+                "variant": "success",
+                "tooltip": "Completed vs total milestones",
+                "complete": "Complete"
+            },
+            "deliverables": {
+                "label": "Deliverables",
+                "icon": "Target",
+                "variant": "info",
+                "tooltip": "Completed vs total deliverables"
+            },
+            "teamMembers": {
+                "label": "Team Members",
+                "icon": "Users",
+                "variant": "info",
+                "tooltip": "Active team members",
+                "active": "Active"
+            }
+        },
+        "statuses": {
+            "inProgress": {
+                "label": "In Progress",
+                "value": "inProgress",
+                "icon": "LoaderCircle",
+                "color": "#9698fd"
+            },
+            "onHold": {
+                "label": "On Hold",
+                "value": "onHold",
+                "icon": "Pause",
+                "color": "#808080"
+            },
+            "completed": {
+                "label": "Completed",
+                "value": "completed",
+                "icon": "CheckCircle",
+                "color": "#2ECC71"
+            },
+            "cancelled": {
+                "label": "Cancelled",
+                "value": "cancelled",
+                "icon": "XCircle",
+                "color": "#E74C3C"
+            }
+        }
+    },
+    "tabs": {
+        "timeline": {
+            "label": "Timeline",
+            "index": 0,
+            "title": "Track project progress and milestones"
+        },
+        "deliverables": {
+            "label": "Deliverables",
+            "index": 1,
+            "title": "Manage your deliverables"
+        }
+    },
+    "ganttView": {
+        "controls": {
+            "viewOptions": [
+                {
+                    "value": "year",
+                    "label": "Year"
+                },
+                {
+                    "value": "month",
+                    "label": "Month"
+                }
+            ],
+            "statusLegend": [
+                {
+                    "label": "Completed",
+                    "color": "completed"
+                },
+                {
+                    "label": "In Progress",
+                    "color": "inProgress"
+                },
+                {
+                    "label": "Upcoming",
+                    "color": "upcoming"
+                }
+            ]
+        },
+        "timeline": {
+            "header": {
+                "weekDays": {
+                    "short": [
+                        "Sun",
+                        "Mon",
+                        "Tue",
+                        "Wed",
+                        "Thu",
+                        "Fri",
+                        "Sat"
+                    ],
+                    "long": [
+                        "Sunday",
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday"
+                    ]
+                },
+                "months": {
+                    "short": [
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "May",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec"
+                    ],
+                    "long": [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December"
+                    ]
+                },
+                "aria": {
+                    "weekendDay": "Weekend day",
+                    "monthStart": "Start of month"
+                }
+            },
+            "indicators": {
+                "today": "Today",
+                "currentWeek": "Current week",
+                "currentMonth": "Current month"
+            }
+        },
+        "stageCard": {
+            "labels": {
+                "dependencies": "Dependencies: stage",
+                "milestones": "Milestones"
+            }
+        }
+    },
+    "deliverablesView": {
+        "texts": {
+            "deliverable": "deliverable",
+            "deliverables": "deliverables"
+        },
+        "card": {
+            "labels": {
+                "dueDate": "Due",
+                "contents": "Contents & Attachments",
+                "items": "items",
+                "noContent": "No content available",
+                "additionalInfo": "Additional Information",
+                "viewDetails": "View Details",
+                "hideDetails": "Hide Details"
+            },
+            "actions": {
+                "toggleDetails": {
+                    "show": "View Details",
+                    "hide": "Hide Details"
+                }
+            }
+        },
+        "contentTypes": {
+            "document": {
+                "extensions": [
+                    "pdf",
+                    "doc",
+                    "docx"
+                ],
+                "label": "Document"
+            },
+            "design": {
+                "extensions": [
+                    "fig",
+                    "sketch"
+                ],
+                "label": "Design"
+            },
+            "spreadsheet": {
+                "extensions": [
+                    "xlsx",
+                    "xls",
+                    "csv"
+                ],
+                "label": "Spreadsheet"
+            },
+            "image": {
+                "extensions": [
+                    "png",
+                    "jpg",
+                    "jpeg"
+                ],
+                "label": "Image"
+            },
+            "component": {
+                "label": "Component"
+            },
+            "other": {
+                "label": "Other"
+            }
+        }
+    },
+    "messages": {
+        "loading": "Loading project details...",
+        "error": "Error loading project",
+        "noData": "No project data available",
+        "confirmActions": {
+            "deleteDeliverable": "Are you sure you want to delete this deliverable?",
+            "removeTeamMember": "Are you sure you want to remove this team member?"
+        }
+    },
+    "errors": {
+        "loadFailed": "Failed to load project details",
+        "updateFailed": "Failed to update project",
+        "insufficientPermissions": "You don't have permission to perform this action"
+    },
+    "accessibility": {
+        "timelineTab": "Project timeline view",
+        "deliverablesTab": "Project deliverables list",
+        "ganttGrid": "Project timeline grid",
+        "stageList": "Project stages list",
+        "deliverablesList": "Project deliverables list"
+    }
+}
