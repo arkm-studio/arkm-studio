@@ -1,0 +1,375 @@
+@import "@/app/_styles/variables";
+@import "@/app/_styles/mixins";
+
+.project-carousel {
+  width: 100%;
+  color: $text-primary;
+  position: relative;
+  scroll-margin-top: 80px;
+  padding: $spacing-xxxl 0;
+
+  &__container {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+  }
+
+  &__header {
+    padding: 0 $spacing-xxl;
+    text-align: left;
+    margin-bottom: $spacing-lg;
+
+    @include tablet {
+      margin-bottom: $spacing-md;
+    }
+
+    @include mobile {
+      padding: 0 $spacing-xl;
+      margin-bottom: $spacing-sm;
+    }
+
+    @include mobile-small {
+      padding: 0 $spacing-lg;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: $spacing-md;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: -10px;
+    //   left: 0;
+    //   width: 80px;
+    //   height: 3px;
+    //   background: $primary-color;
+    // }
+  }
+
+  &__subtitle {
+    max-width: 800px;
+    color: $text-secondary !important;
+    line-height: 1.6 !important;
+  }
+
+  &__navigation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-sm;
+    padding: 0 $spacing-xl;
+    margin-bottom: $spacing-md;
+
+    @include tablet {
+      padding: 0 $spacing-lg;
+    }
+
+    @include mobile {
+      padding: 0 $spacing-md;
+    }
+  }
+
+  &__nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba($primary-color, 0.1);
+    border: 1px solid rgba($primary-color, 0.2);
+    color: $white-base;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($primary-color, 0.2);
+      border-color: $primary-color;
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    &--prev {
+      svg {
+        margin-left: -2px;
+      }
+    }
+
+    &--next {
+      svg {
+        margin-right: -2px;
+      }
+    }
+  }
+
+  &__carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0 $spacing-md;
+    margin-bottom: $spacing-xl;
+    overflow: hidden;
+  }
+
+  &__carousel {
+    display: flex;
+    gap: $spacing-lg;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 $spacing-lg;
+    height: 500px; // Altura fija para asegurar que las tarjetas sean visibles
+
+    // Esconder scrollbar pero mantener funcionalidad
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari/Opera
+    }
+
+    &--dragging {
+      cursor: grabbing;
+
+      .project-carousel__project-link {
+        pointer-events: none;
+      }
+    }
+
+    @include tablet {
+      gap: $spacing-md;
+      padding: $spacing-md;
+      height: 450px;
+    }
+
+    @include mobile {
+      gap: $spacing-sm;
+      padding: $spacing-sm;
+      height: 400px;
+    }
+  }
+  &__decoration {
+    width: 40px;
+    height: 3px;
+    background-color: $primary-light;
+    margin-bottom: $spacing-sm;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+
+  // Mantén el resto de estilos igual...
+
+  &__project {
+    flex: 0 0 30%;
+    min-width: 350px;
+    height: 450px; // Altura fija para la tarjeta
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-10px);
+      // box-shadow: 0 12px 30px rgba($primary-color, 0.25);
+
+      .project-carousel__arrow-button {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .project-carousel__image {
+        transform: scale(1.05);
+      }
+    }
+
+    @include tablet {
+      flex: 0 0 65%;
+      min-width: 300px;
+      height: 400px;
+    }
+
+    @include mobile {
+      flex: 0 0 85%;
+      min-width: 280px;
+      height: 350px;
+    }
+  }
+
+  &__project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__project-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  &__arrow-button {
+    position: absolute;
+    top: $spacing-md;
+    right: $spacing-md;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba($black-base, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white-base;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    transform: translateY(-5px);
+    z-index: 3;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba($white-base, 0.1);
+
+    &:hover {
+      background-color: rgba($primary-color, 0.7);
+      border-color: $primary-color;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: $spacing-md;
+    z-index: 2;
+    background: rgba($black-dark, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba($white-base, 0.1);
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__star {
+    color: $primary-light; // Color más armónico para las estrellas
+    font-size: 1rem;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  }
+
+  &__project-title {
+    color: $white-base !important;
+    margin: 0;
+    margin-bottom: $spacing-xs;
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    @include mobile {
+      font-size: 1.2rem !important;
+    }
+  }
+
+  &__project-subtitle {
+    color: rgba($white-base, 0.8) !important;
+    margin: 0;
+    font-size: 0.9rem !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    margin: $spacing-lg 0;
+  }
+
+  &__dots {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba($white-base, 0.15);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.5);
+      transform: scale(1.1);
+    }
+
+    &--active {
+      background-color: $primary-color;
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba($primary-color, 0.4);
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: rgba($white-base, 0.9);
+      }
+    }
+  }
+
+  // Animación de entrada
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &__visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

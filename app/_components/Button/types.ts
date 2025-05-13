@@ -88,7 +88,9 @@ export interface ButtonProps {
   size?: ButtonSize;
   radius?: ButtonRadius;
   icon?: ReactNode;
+
   className?: string;
+  target?: "_blank" | "_self";
   href?: string;
   isLoading?: boolean;
   disabled?: boolean;

@@ -1,11 +1,259 @@
 {
   "title": "Proyectos Destacados",
-  "subtitle": "Una colección de proyectos recientes que muestran mis habilidades y experiencia",
+  "subtitle": "Una colección de mis trabajos recientes que muestran mis habilidades y experiencia en desarrollo web",
   "projects": [
     {
+      "id": "bunkhouse-hotels",
+      "title": "Bunkhouse Hotels",
+      "description": "Desarrollo frontend especializado para una plataforma digital hotelera boutique, implementando interfaces modernas y funcionalidades avanzadas con Next.js y TypeScript que optimizan la experiencia del usuario y facilitan la gestión de contenido dinámico para cada propiedad.",
+      "introText": "Para este proyecto trabajamos en estrecha colaboración con Wallop, empresa especializada en desarrollo de sitios web para cadenas hoteleras en Estados Unidos y Canadá. Como parte de Nebulosa Studio, me encargué del desarrollo frontend completo de la plataforma de Bunkhouse Hotels, implementando una arquitectura escalable que integra perfectamente con WordPress como CMS.",
+      "client": "Wallop",
+      "projectType": "Desarrollo Frontend",
+      "platform": "Web y Móvil",
+      "expertise": [
+        "Desarrollo Frontend",
+        "Single Page Applications",
+        "CMS Integration",
+        "API Management"
+      ],
+      "technologies": [
+        "Next.js 12",
+        "TypeScript",
+        "React 18",
+        "WordPress REST API",
+        "SASS",
+        "Google Maps API",
+        "Swiper.js",
+        "Formik",
+        "Google Analytics 4"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/bunkhouse.png",
+          "alt": "Sección hero de Bunkhouse Hotels con experiencia de marca inmersiva y navegación"
+        },
+        {
+          "src": "/images/portfolio/bunkhouse-2.png",
+          "alt": "Sección de newsletter con suscripción por email y mensajería de marca"
+        },
+        {
+          "src": "/images/portfolio/bunkhouse-3.png",
+          "alt": "Integración de e-commerce mostrando catálogo de productos e interfaz de reservas"
+        }
+      ],
+      "whatWeDid": [
+        "Desarrollé la arquitectura frontend completa utilizando Next.js 12 con TypeScript, implementando un diseño moderno y responsivo que refleja la identidad única de cada propiedad de Bunkhouse Hotels. La implementación incluye componentes reutilizables, optimización de rendimiento con SSR/SSG, y una integración fluida con WordPress a través de su REST API.",
+        "Configuré la integración completa con WordPress como headless CMS utilizando Advanced Custom Fields (ACF), permitiendo que el equipo de Bunkhouse actualice fácilmente el contenido, imágenes y reservas sin necesidad de conocimientos técnicos. Implementé WPAPI para la comunicación eficiente con el backend y gestión de estados con Next.js.",
+        "Desarrollé funcionalidades específicas como el sistema de reservas integrado con terceros, implementación de Google Maps API para mostrar ubicaciones, carruseles interactivos con Swiper.js, y formularios optimizados con Formik y validación Yup. También integré Google Analytics 4 para el seguimiento de métricas de usuario y conversiones."
+      ],
+      "finalProduct": "El resultado es una plataforma digital robusta y escalable que ha mejorado significativamente la presencia online de Bunkhouse Hotels. La arquitectura Next.js con TypeScript garantiza un código mantenible y escalable, mientras que la integración headless con WordPress proporciona flexibilidad completa para la gestión de contenido. El sitio ofrece una experiencia de usuario excepcional con tiempos de carga optimizados, navegación intuitiva y funcionalidades avanzadas que han resultado en mayor engagement y conversiones.",
+      "liveUrl": "https://www.bunkhousehotels.com/",
+      "githubUrl": ""
+    },
+    {
+      "id": "scandinave-spa",
+      "title": "Scandinave Spa",
+      "description": "Desarrollo frontend completo para la plataforma digital de la cadena líder de spas nórdicos en Canadá, con una arquitectura Next.js optimizada que traduce la experiencia tranquila y consciente de sus spas físicos en una interfaz digital elegante y funcional.",
+      "introText": "Como parte del equipo de Nebulosa Studio, desarrollé la solución frontend completa para el sitio web de Scandinave Spa, trabajando en colaboración con Wallop para crear una experiencia digital que honra la filosofía de bienestar de la marca. La implementación técnica se enfocó en crear una plataforma escalable que facilita tanto la gestión de contenido como la experiencia del usuario.",
+      "client": "Wallop",
+      "projectType": "Desarrollo Frontend",
+      "platform": "Web y Móvil",
+      "expertise": [
+        "Desarrollo Frontend",
+        "SPA Development",
+        "API Integration",
+        "Performance Optimization"
+      ],
+      "technologies": [
+        "Next.js 12",
+        "React 17",
+        "TypeScript",
+        "SASS",
+        "Google Maps API",
+        "React Big Calendar",
+        "Formik",
+        "Flickity",
+        "React Player",
+        "WordPress REST API"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/scandinave.png",
+          "alt": "Página de inicio de Scandinave Spa mostrando la estética serena y elementos naturales"
+        },
+        {
+          "src": "/images/portfolio/scandinave-3.png",
+          "alt": "Página de destinos mostrando las cuatro ubicaciones icónicas de Scandinave Spa en Canadá"
+        },
+        {
+          "src": "/images/portfolio/scandinave-2.png",
+          "alt": "Página de destinos mostrando las cuatro ubicaciones icónicas de Scandinave Spa en Canadá"
+        }
+      ],
+      "whatWeDid": [
+        "Desarrollé la arquitectura frontend utilizando Next.js 12 con TypeScript, implementando un diseño responsivo que refleja la estética serena de la marca. Creé componentes reutilizables que permiten una fácil mantención y escalabilidad del código, asegurando que la experiencia de usuario sea consistente en todas las páginas y dispositivos.",
+        "Implementé la integración completa con WordPress como headless CMS, configurando la comunicación eficiente con la REST API para la gestión dinámica de contenido. Desarrollé sistemas de mapas interactivos usando Google Maps API para mostrar las cuatro ubicaciones de spa, y calendarios de reserva con React Big Calendar para gestionar la disponibilidad de servicios.",
+        "Optimicé el rendimiento del sitio implementando técnicas de SSG/SSR con Next.js para mejorar los tiempos de carga, y configuré React Player para la integración de contenido multimedia. Desarrollé sliders personalizados con Flickity para mostrar imágenes de los spas, y formularios optimizados con Formik y validación Yup para procesos de reserva y contacto."
+      ],
+      "finalProduct": "La plataforma final representa una implementación técnica exitosa que cumple tanto con los requisitos funcionales como con la visión de diseño de Scandinave Spa. El sitio web entrega una experiencia optimizada con tiempos de carga mejorados, navegación intuitiva, y funcionalidades robustas para la gestión de reservas y contenido. La arquitectura escalable de Next.js asegura que el sitio puede crecer junto con la marca, mientras que la integración con WordPress proporciona flexibilidad para actualizaciones de contenido sin necesidad de tocar el código frontend.",
+      "liveUrl": "https://www.scandinave.com/",
+      "githubUrl": ""
+    },
+   {
+  "id": "financiera-independencia",
+  "title": "Financiera Independencia - Grupo Findep",
+  "description": "Desarrollo frontend para plataforma de productos crediticios de Financiera Independencia, parte del ecosistema Grupo Findep, con calculadora de préstamos avanzada, múltiples productos crediticios (empleados, pensionados, empresarios) y proceso de solicitud digital optimizado.",
+  "introText": "Como parte del equipo de desarrollo de Grupo Findep, contribuyo al desarrollo y mantenimiento de la plataforma de Financiera Independencia, una de las marcas principales del grupo financiero. Este proyecto utiliza la arquitectura compartida de microservicios que implementamos across todas las plataformas del grupo, trabajando con metodologías Agile para entregar funcionalidades innovadoras en el sector crediticio.",
+  "client": "Grupo Findep - Financiera Independencia",
+  "projectType": "Plataforma Fintech - Productos Crediticios",
+  "platform": "Web y Móvil",
+  "expertise": [
+    "Desarrollo Frontend",
+    "Microservicios Frontend",
+    "Methodologías Agile", 
+    "DevOps Frontend",
+    "Testing Automatizado"
+  ],
+  "technologies": [
+    "Gatsby 3",
+    "React 16",
+    "TypeScript",
+    "Material-UI",
+    "Emotion",
+    "Azure DevOps",
+    "Microservicios",
+    "Jest Testing",
+    "PDF Make",
+    "React Signature Canvas",
+    "React QR Code"
+  ],
+  "images": [
+    {
+      "src": "/images/portfolio/fisa-1.png",
+      "alt": "Calculadora de préstamos de Financiera Independencia mostrando opciones de pago y tabla de amortización"
+    },
+    {
+      "src": "/images/portfolio/fisa-2.png",
+      "alt": "Página de presentación de productos mostrando las diversas opciones de préstamos con comparación clara"
+    }
+  ],
+  "whatWeDid": [
+    "Desarrollo de la interfaz frontend para Financiera Independencia utilizando Gatsby y React, implementando calculadoras avanzadas de préstamos que permiten a los usuarios personalizar montos, plazos y frecuencias de pago para diferentes perfiles (empleados, pensionados, empresarios). Trabajo en sprints Agile de 2 semanas contribuyendo a features específicas de la marca mientras mantengo la consistencia del ecosistema Findep.",
+    "Implementación de procesos digitales que reducen el tiempo de solicitud de préstamos a solo 10 minutos, incluyendo verificación de elegibilidad automática, carga de documentos, firma electrónica con React Signature Canvas y generación de códigos QR. Integración con APIs de scoring crediticio y sistemas bancarios para automatizar el proceso de aprobación mientras mantengo altos estándares de seguridad.",
+    "Colaboración en el desarrollo de componentes reutilizables del ecosistema Findep, optimización de performance con técnicas de lazy loading, y participación en testing automatizado con Jest. Contribuyo a mantener una cobertura de código alta y deploys automatizados através de Azure DevOps pipelines, asegurando calidad y estabilidad en todas las releases."
+  ],
+  "finalProduct": "Mi contribución a Financiera Independencia forma parte del éxito del ecosistema digital de Grupo Findep, donde esta plataforma procesa miles de préstamos diariamente manteniendo excelentes métricas de disponibilidad y rendimiento. La arquitectura de microservicios permite escalabilidad mientras las metodologías Agile aseguran entregas consistentes de valor. La plataforma ha mejorado significativamente las tasas de conversión y la satisfacción del cliente, estableciendo a Financiera Independencia como una marca líder en el sector crediticio mexicano.",
+  "liveUrl": "https://www.independencia.com.mx/",
+  "githubUrl": ""
+},
+    {
+      "id": "apoyo-economico",
+      "title": "Apoyo Económico - Grupo Findep",
+      "description": "Desarrollo frontend para plataforma de créditos personales de Apoyo Económico, parte del ecosistema Grupo Findep, especializada en préstamos rápidos con procesos 100% digitales, calculadora avanzada de pagos y experiencia de usuario optimizada para conversión.",
+      "introText": "Como parte del equipo de desarrollo de Grupo Findep, contribuyo al desarrollo y mantenimiento de la plataforma de Apoyo Económico, una marca especializada en créditos personales rápidos. Este proyecto forma parte del ecosistema de múltiples plataformas financieras que manejamos con metodologías Agile, utilizando la misma arquitectura base de Gatsby y microservicios que implementamos para las demás marcas del grupo.",
+      "client": "Grupo Findep - Apoyo Económico",
+      "projectType": "Plataforma Fintech - Créditos Personales",
+      "platform": "Web y Móvil",
+      "expertise": [
+        "Desarrollo Frontend",
+        "Experiencia de Usuario Fintech",
+        "Optimización de Conversión",
+        "Integración API Bancaria"
+      ],
+      "technologies": [
+        "Gatsby 3",
+        "React 16",
+        "TypeScript",
+        "Material-UI",
+        "Emotion",
+        "Azure DevOps",
+        "Microservicios",
+        "Jest Testing",
+        "PDF Make",
+        "React Signature Canvas",
+        "Google Analytics"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/aef-1.png",
+          "alt": "Calculadora de préstamos de Apoyo Económico con opciones flexibles de pago"
+        },
+        {
+          "src": "/images/portfolio/aef-2.png",
+          "alt": "Calculadora de préstamos de Apoyo Económico con opciones flexibles de pago"
+        },
+        {
+          "src": "/images/portfolio/aef-3.png",
+          "alt": "Proceso de solicitud simplificado en 3 pasos para créditos personales"
+        }
+      ],
+      "whatWeDid": [
+        "Desarrollo de la interfaz frontend para Apoyo Económico utilizando la arquitectura compartida de Gatsby con React, implementando componentes específicos para la marca que mantienen la consistencia del ecosistema Findep. Trabajo en sprints Agile de 2 semanas, desarrollando features como calculadoras de préstamos personalizadas, formularios de solicitud optimizados y pantallas de seguimiento de estado de préstamo.",
+        "Implementación de experiencias de usuario específicas para el segmento de créditos personales rápidos, incluyendo flujos de onboarding optimizados para móvil, validación de documentos en tiempo real y funcionalidades de firma digital. Integración con APIs bancarias para verificación de cuentas y procesamiento de pagos, manteniendo los estándares de seguridad financiera.",
+        "Colaboración en el desarrollo de funcionalidades compartidas del ecosistema Findep, como el sistema de scoring crediticio unificado, componentes de UI reutilizables y módulos de análisis. Participación en code reviews, testing automatizado con Jest, y optimización de performance para mantener tiempos de carga menores a 3 segundos en la experiencia móvil."
+      ],
+      "finalProduct": "Apoyo Económico representa una implementación exitosa del modelo de microservicios frontend de Grupo Findep, adaptada específicamente para el mercado de créditos personales rápidos. La plataforma mantiene una tasa de conversión optimizada y excelentes métricas de rendimiento, beneficiándose de la infraestructura compartida y las mejores prácticas establecidas en el ecosistema Findep. Mi trabajo contribuye a una experiencia de usuario fluida que ha posicionado a Apoyo Económico como una opción competitiva en el mercado de préstamos personales en México.",
+      "liveUrl": "https://www.apoyoeconomico.com.mx/",
+      "githubUrl": ""
+    },
+    {
+      "id": "kontak-retriever",
+      "title": "Kontak Retriever",
+      "description": "Desarrollo frontend para aplicación web veterinaria de última generación que automatiza la recuperación de información de llamadas y registros de mascotas, integrando múltiples sistemas PIMS con una arquitectura moderna de Next.js 13 y Node.js backend.",
+      "introText": "Como parte del equipo de desarrollo de Nebulosa Studio, contribuí significativamente a la implementación de la interfaz frontend de Kontak Retriever, una aplicación que transforma la gestión de llamadas en clínicas veterinarias. Mi participación en este proyecto desafiante incluyó el desarrollo de componentes clave que conectan sistemas telefónicos con múltiples PIMS (Practice Information Management Systems), entregando información crítica en tiempo real.",
+      "client": "Kontak",
+      "projectType": "Desarrollo Frontend",
+      "platform": "Web y Escritorio",
+      "expertise": [
+        "Desarrollo Frontend",
+        "API Integration",
+        "Real-time Data Management",
+        "Complex UI/UX Implementation"
+      ],
+      "technologies": [
+        "Next.js 13",
+        "React 18",
+        "TypeScript",
+        "Node.js",
+        "GraphQL",
+        "Socket.io",
+        "SASS",
+        "React Query",
+        "Formik",
+        "Redis"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/kontak-1.png",
+          "alt": "Panel de Kontak Retriever mostrando información de llamadas en tiempo real y detalles de mascotas"
+        },
+        {
+          "src": "/images/portfolio/kontak-2.png",
+          "alt": "Interfaz de programación de citas con vista integrada de calendario"
+        }
+      ],
+      "whatWeDid": [
+        "Como parte del equipo de Nebulosa Studio, participé en la implementación de la arquitectura frontend utilizando Next.js 13 con App Router y TypeScript, desarrollando componentes específicos que manejan datos en tiempo real de múltiples sistemas PIMS. Contribuí a la configuración de comunicación con el backend Node.js a través de GraphQL y colaboré en la integración de WebSockets para actualizaciones instantáneas.",
+        "Trabajando desde Nebulosa Studio, colaboré en el desarrollo de componentes avanzados para la gestión de llamadas en tiempo real, incluyendo secciones específicas de dashboards que muestran información de mascotas y propietarios. Mi trabajo incluyó la implementación de lógica de estado con React Query y la integración con APIs de sistemas como Rhapsody, Vetspire, y Digitail.",
+        "Mi contribución desde Nebulosa Studio se centró en el desarrollo de interfaces especializadas, especialmente en el sistema de citas y componentes del calendario sincronizado con múltiples PIMS. También trabajé en la optimización del rendimiento de componentes críticos, implementando técnicas de lazy loading y manejo eficiente de grandes volúmenes de datos."
+      ],
+      "finalProduct": "Mi contribución al proyecto Kontak Retriever ayudó a crear una experiencia de usuario que ha transformado las operaciones de clínicas veterinarias. Los componentes que desarrollé responden instantáneamente a llamadas entrantes, contribuyendo a mostrar información relevante en menos de 2 segundos. La implementación colaborativa con Next.js 13 y la integración eficiente con el backend Node.js permite manejar múltiples clínicas simultáneamente. Mi trabajo ha sido parte integral de una herramienta que ha reducido significativamente los tiempos de respuesta del personal y mejorado la calidad de atención al cliente en el sector veterinario.",
+      "liveUrl": "https://petdesk.com/veterinary-phone-system/",
+      "githubUrl": ""
+    },
+    {
       "id": "supreme-barf-canine",
-      "title": "Supreme BARF Canine E-commerce",
-      "description": "E-commerce especializado en alimentos naturales para perros, con interfaz intuitiva, calculadora de porciones y sistema de paquetes con descuentos. Diseñado para proporcionar una experiencia de compra fluida a propietarios de mascotas.",
+      "title": "Supreme BARF E-commerce",
+      "description": "E-commerce especializado en alimentos naturales para perros, con una interfaz intuitiva, calculadora de porciones y sistema de paquetes con descuento. Diseñado para proporcionar una experiencia de compra fluida para los dueños de mascotas.",
+      "introText": "En el panorama en constante evolución del comercio electrónico, hemos creado una solución digital que pone la salud de los perros en primer lugar. Supreme BARF Canine se destaca como una plataforma especializada donde la calidad se une a la experiencia del usuario, ofreciendo a los dueños de mascotas un viaje intuitivo hacia la nutrición natural para sus compañeros peludos.",
+      "client": "Supreme BARF Canine",
+      "projectType": "Desarrollo de E-commerce",
+      "platform": "Web y Móvil",
+      "expertise": [
+        "Desarrollo Frontend",
+        "Diseño UX/UI",
+        "E-commerce"
+      ],
       "technologies": [
         "React",
         "Next.js",
@@ -17,21 +265,36 @@
       ],
       "images": [
         {
-          "src": "/images/portfolio/supreme-barf-hero.png",
-          "alt": "Hero section del sitio Supreme BARF Canine mostrando alimento natural para perros"
+          "src": "/images/portfolio/supreme-barf-banana.png",
+          "alt": "Sección principal del sitio Supreme BARF Canine mostrando alimentos naturales para perros"
         },
         {
           "src": "/images/portfolio/supreme-barf-about.png",
-          "alt": "Página Acerca del Alimento mostrando los beneficios del producto natural para perros"
+          "alt": "Página Sobre la Alimentación mostrando los beneficios del producto natural para perros"
         }
       ],
+      "whatWeDid": [
+        "Desarrollamos una solución integral de comercio electrónico centrada en la nutrición natural para perros. La plataforma cuenta con una interfaz de usuario intuitiva diseñada para guiar a los dueños de mascotas a través de una experiencia de compra fluida, complementada con una innovadora calculadora de porciones que proporciona recomendaciones personalizadas según la raza, el peso y el nivel de actividad.",
+        "Una de las características destacadas es el sistema de paquetes con descuento, que incentiva las compras al por mayor y simplifica el proceso de pedidos recurrentes. Este enfoque no solo mejora la fidelidad del cliente, sino que también garantiza una nutrición constante para las mascotas mediante entregas regulares.",
+        "El diseño responsive se adapta perfectamente a todos los dispositivos, manteniendo la sensación premium de la marca en las experiencias de escritorio y móvil. La optimización del rendimiento fue un enfoque clave, resultando en tiempos de carga rápidos incluso con el rico contenido visual que muestra la gama de productos."
+      ],
+      "finalProduct": "La plataforma final de Supreme BARF Canine ofrece un equilibrio perfecto entre atractivo estético y excelencia funcional. El diseño enfocado a la conversión, combinado con contenido educativo sobre nutrición natural para perros, ha resultado en métricas de participación significativamente más altas y mayores valores promedio de pedidos en comparación con los estándares de la industria.",
       "liveUrl": "https://supremebarfcanine.com",
       "githubUrl": "https://github.com/kap-94/supreme-barf-canine"
     },
     {
       "id": "arkm-suite",
       "title": "ARKM Suite",
-      "description": "Portal centralizado para gestión de proyectos con dashboard interactivo, seguimiento detallado de progreso mediante líneas de tiempo Gantt y sistema completo de entregables, optimizado para mejorar la comunicación entre equipos y clientes.",
+      "description": "Portal centralizado de gestión de proyectos con panel interactivo, seguimiento detallado del progreso mediante líneas de tiempo Gantt y sistema integral de entregables, optimizado para mejorar la comunicación entre equipos y clientes.",
+      "introText": "ARKM Suite representa la próxima generación de herramientas de gestión de proyectos, abordando las brechas de comunicación que a menudo afectan a las colaboraciones complejas. Construida desde cero pensando tanto en equipos técnicos como en partes interesadas no técnicas, esta plataforma funciona como el sistema nervioso central para la ejecución de proyectos y la participación del cliente.",
+      "client": "ARKM Technologies",
+      "projectType": "Desarrollo de Aplicación Web",
+      "platform": "Web y PWA para Escritorio",
+      "expertise": [
+        "Arquitectura Frontend",
+        "Diseño UX/UI",
+        "Integración Backend"
+      ],
       "technologies": [
         "React",
         "TypeScript",
@@ -48,20 +311,35 @@
         },
         {
           "src": "/images/portfolio/arkm-design-system.png",
-          "alt": "Panel del sistema de diseño mostrando componentes UI consistentes y documentación"
+          "alt": "Panel del sistema de diseño que muestra componentes UI consistentes y documentación"
         },
         {
           "src": "/images/portfolio/arkm-timeline-dark.png",
-          "alt": "Vista de cronograma Gantt mostrando las etapas del proyecto y dependencias"
+          "alt": "Vista de línea de tiempo Gantt mostrando etapas del proyecto y dependencias"
         }
       ],
+      "whatWeDid": [
+        "Diseñamos e implementamos una solución centralizada de gestión de proyectos que brinda una visibilidad sin precedentes a los flujos de trabajo complejos. El panel interactivo proporciona actualizaciones de progreso en tiempo real, visualización de asignación de recursos e identificación de cuellos de botella, permitiendo una gestión proactiva de proyectos.",
+        "La función de línea de tiempo Gantt se desarrolló con especial atención a las dependencias y el seguimiento de hitos, permitiendo ajustes dinámicos mientras se mantiene una visión clara de las trayectorias del proyecto. Este enfoque visual para la gestión de cronogramas ha demostrado ser particularmente valioso para equipos multifuncionales y presentaciones a clientes.",
+        "El sistema de entregables se diseñó en torno a un enfoque basado en versionado, permitiendo ciclos de revisión colaborativa mientras se mantiene un registro de auditoría claro. Cada entregable cuenta con flujos de trabajo de aprobación personalizables, notificaciones automatizadas e integración con herramientas comunes de productividad."
+      ],
+      "finalProduct": "ARKM Suite ha transformado la forma en que los equipos colaboran en proyectos complejos, reduciendo drásticamente la sobrecarga de comunicación y los desajustes. La plataforma ha demostrado resultados notables en la reducción de los tiempos de entrega de proyectos y ha mejorado las métricas de satisfacción del cliente, convirtiéndose en una herramienta indispensable para organizaciones que gestionan múltiples proyectos concurrentes con diversos grupos de interesados.",
       "liveUrl": "https://arkm-suite.vercel.app",
       "githubUrl": "https://github.com/kap-94/arkm-suite"
     },
     {
       "id": "trvlr-travel-platform",
       "title": "TRVLR",
-      "description": "Web de viajes moderna con búsqueda de destinos, guías y blogs. Permite a los usuarios explorar destinos increíbles, planificar itinerarios y descubrir recomendaciones locales con una interfaz visualmente atractiva.",
+      "description": "Moderno sitio web de viajes con búsqueda de destinos, guías y blogs. Permite a los usuarios explorar destinos increíbles, planificar itinerarios y descubrir recomendaciones locales con una interfaz visualmente atractiva.",
+      "introText": "TRVLR reimagina la experiencia digital de viajes al fusionar contenido inspirador con herramientas prácticas de planificación. Esta plataforma cierra la brecha entre soñar con destinos y experimentarlos realmente, todo dentro de un entorno visual inmersivo que captura la esencia de la pasión por viajar.",
+      "client": "TRVLR Experiences",
+      "projectType": "Desarrollo de Plataforma de Viajes",
+      "platform": "Web y Móvil",
+      "expertise": [
+        "Desarrollo Frontend",
+        "Diseño UX/UI",
+        "Estrategia de Contenido"
+      ],
       "technologies": [
         "React",
         "Next.js",
@@ -79,13 +357,19 @@
         },
         {
           "src": "/images/portfolio/trvlr-trips.png",
-          "alt": "Visualización de itinerarios de viaje con mapas interactivos y planificación de rutas"
+          "alt": "Visualización de itinerario de viaje con mapas interactivos y planificación de ruta"
         },
         {
           "src": "/images/portfolio/trvlr-why-travel.png",
-          "alt": "Página Why Travel con contenido inspiracional y razones para viajar alrededor del mundo"
+          "alt": "Página Por Qué Viajar con contenido inspirador y razones para viajar por el mundo"
         }
       ],
+      "whatWeDid": [
+        "Desarrollamos una plataforma de viajes integral que equilibra contenido inspirador con herramientas prácticas de planificación. El sistema de búsqueda de destinos se construyó con un mecanismo de filtrado avanzado que tiene en cuenta preferencias de viaje, estacionalidad, restricciones presupuestarias e intereses de actividades, entregando recomendaciones altamente personalizadas.",
+        "Las funciones de mapas interactivos se implementaron utilizando componentes Leaflet personalizados, permitiendo a los usuarios explorar destinos visualmente mientras acceden a información clave a través de superposiciones intuitivas. Cada punto de interés incluye contenido curado que combina perspectivas locales con información práctica para visitantes.",
+        "El creador de itinerarios se diseñó en torno a una interfaz modular de arrastrar y soltar, permitiendo a los usuarios construir planes de viaje personalizados mientras calcula automáticamente aspectos logísticos como tiempos de viaje, duraciones óptimas de visita y opciones de alojamiento. El sistema también proporciona sugerencias inteligentes basadas en proximidad y relevancia temática."
+      ],
+      "finalProduct": "TRVLR se ha establecido exitosamente como más que solo otro sitio web de viajes; se ha convertido en un compañero integral para el viajero moderno. La plataforma ha recibido elogios por su diseño intuitivo, profundidad de contenido y herramientas innovadoras de planificación que genuinamente mejoran la experiencia de viaje desde la inspiración hasta el regreso. Las métricas de participación de usuarios muestran tiempos de sesión significativamente más largos y mayores tasas de retorno en comparación con los promedios de la industria.",
       "liveUrl": "https://trvlr-xi.vercel.app",
       "githubUrl": "https://github.com/kap-94/trvlr"
     }

@@ -36,6 +36,7 @@ export const Button = forwardRef<
       radius = "full",
       icon,
       className,
+      target = "_blank",
       href,
       isLoading = false,
       disabled = false,
@@ -169,6 +170,7 @@ export const Button = forwardRef<
           href={href}
           className={buttonClasses}
           ref={ref as any}
+          target={target}
           onClick={onClick}
           {...props}
         >

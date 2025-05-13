@@ -1,0 +1,547 @@
+@import "@/app/_styles/variables";
+@import "@/app/_styles/mixins";
+
+// Main container
+.project-details {
+  background-color: $black-dark;
+  color: $text-primary;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  // Create subtle grain texture for depth
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      padding: $spacing-lg;
+    }
+
+    @include mobile {
+      padding: $spacing-md;
+    }
+  }
+
+  // Hero section
+  &__hero {
+    padding: $spacing-xl 0;
+    border-bottom: 1px solid rgba($text-tertiary, 0.1);
+    margin-bottom: $spacing-xxl;
+    @include flex($direction: column, $gap: $spacing-xxl, $align: center);
+
+    @include mobile {
+      padding: $spacing-xl 0;
+      gap: $spacing-xl;
+    }
+  }
+
+  &__hero-header {
+    margin-bottom: $spacing-md;
+    width: 100%;
+  }
+
+  &__hero-content {
+    @include flex($direction: column);
+  }
+
+  &__header-content {
+    text-align: center;
+    @include flex($direction: column, $align: center, $justify: center);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__category-badge {
+    display: inline-block;
+    padding: $spacing-xs $spacing-md;
+    background-color: rgba($primary-color, 0.1);
+    border-radius: $border-radius-full;
+    border: 1px solid rgba($primary-color, 0.2);
+    margin-bottom: $spacing-sm;
+
+    & > span {
+      color: $primary-color !important;
+      font-size: 0.875rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.05em !important;
+    }
+  }
+
+  // Image container
+  &__image-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // Featured image with dots (reemplazo de thumbnails)
+  &__featured-image-container {
+    @include flex($direction: column, $justify: center, $gap: $spacing-md);
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  &__featured-image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    @include elevation(2);
+
+    @include tablet {
+      height: 400px;
+    }
+
+    @include mobile {
+      height: 300px;
+    }
+  }
+
+  &__image {
+    object-fit: contain;
+    object-position: center;
+    border-radius: $border-radius-md;
+
+    @include transition(transform, 0.5s);
+  }
+
+  &__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba($black-dark, 0) 0%,
+      rgba($black-dark, 0.1) 70%,
+      rgba($black-dark, 0.4) 100%
+    );
+    z-index: 1;
+  }
+
+  // Nuevos estilos para los dots (reemplazo de las miniaturas)
+  &__dots-slider {
+    @include flex($gap: $spacing-md, $justify: center);
+    padding: $spacing-md 0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba($white-base, 0.15);
+    cursor: pointer;
+    @include transition(all, 0.3s);
+    border: 2px solid transparent;
+    position: relative;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.5);
+      transform: scale(1.1);
+    }
+
+    &--active {
+      background-color: $primary-color;
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba($primary-color, 0.4);
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: rgba($white-base, 0.9);
+      }
+    }
+
+    @include mobile {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  // Hero info section (restructured)
+  &__hero-info {
+    margin-top: -10vh;
+    @include flex($direction: column, $justify: center, $align: center);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__info-wrapper {
+    @include flex($direction: column, $gap: $spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__client-platform-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-lg;
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    border: 1px solid rgba($white-base, 0.05);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+      padding: $spacing-md;
+    }
+  }
+
+  &__client-info-container,
+  &__platform-info-container {
+    @include flex($direction: column, $gap: $spacing-xs);
+  }
+
+  &__info-label {
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    color: $primary-color !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em !important;
+  }
+
+  &__client-title,
+  &__platform-title {
+  }
+
+  &__description {
+    border-radius: $border-radius-lg;
+    border: 1px solid rgba($white-base, 0.03);
+    margin-bottom: $spacing-md;
+
+    @include mobile-medium {
+      padding: $spacing-md;
+    }
+  }
+
+  // Project card structure
+  &__project-card {
+    @include flex($direction: column, $gap: $spacing-lg);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  &__cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xl; // Increased gap between columns
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__detail-card {
+    background: rgba($black-base, 0.2);
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    border: 1px solid rgba($primary-color, 0.05);
+    @include transition(transform, box-shadow);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    &--expertise::before {
+      background: linear-gradient(
+        to bottom,
+        $primary-color,
+        rgba($primary-color, 0.3)
+      );
+    }
+
+    &--technology::before {
+      background: linear-gradient(
+        to bottom,
+        $primary-light,
+        rgba($primary-light, 0.3)
+      );
+    }
+
+    @include mobile {
+      padding: $spacing-md;
+    }
+  }
+
+  &__card-title {
+    color: $primary-color !important;
+    margin-bottom: $spacing-xl !important;
+    padding-left: $spacing-sm;
+    border-bottom: 1px solid rgba($white-base, 0.05);
+    padding-bottom: $spacing-sm;
+  }
+
+  &__tags-wrap {
+    @include flex($gap: $spacing-sm, $align: flex-start); // Increased gap
+    flex-wrap: wrap;
+  }
+
+  // &__tag {
+  //   padding: $spacing-xs $spacing-sm;
+  //   background-color: rgba($white-base, 0.03);
+  //   border-radius: $border-radius-md;
+  //   @include transition(background-color, transform);
+  //   border: 1px solid rgba($white-base, 0.05);
+  //   margin-bottom: $spacing-xs;
+  // }
+  // Actualización para los tags del ProjectDetails con estilo modern-shape
+  &__tag {
+    position: relative;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    border: none;
+    overflow: hidden;
+    margin-bottom: $spacing-xs;
+    color: rgba($primary-light, 0.92); // Un poco más brillante
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    // Shape using clip-path (same as modern-shape button)
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      clip-path: path(
+        "M 0% 50% C 0% -10%, -5% 0%, 50% 0% S 100% -10%, 100% 50%, 105% 100% 50% 100%, 0% 110%, 0% 50%"
+      );
+      background-color: rgba($primary-dark, 0.06); // Ligero aumento
+      border-radius: 13px;
+      z-index: 0;
+    }
+
+    // Interior glow moderadamente mejorado
+    background-color: rgba($primary-color, 0.02);
+    box-shadow: 0px -3px 17px 0px rgba($primary-color, 0.3) inset,
+      // Ligero aumento
+      0px 0px 5px 0px rgba($primary-color, 0.1) inset; // Glow sutil adicional
+
+    // Bottom glow mejorado sutilmente
+    &::after {
+      content: "";
+      width: 85%; // Un poco más ancho
+      height: 42px; // Ligeramente más alto
+      background: radial-gradient(
+        ellipse,
+        rgba($primary-color, 0.3) 0%,
+        // Aumento moderado
+        rgba($primary-color, 0.15) 60%,
+        transparent 100%
+      );
+      border-radius: 100%;
+      filter: blur(17px); // Ligero aumento del blur
+      position: absolute;
+      bottom: -55%; // Un poco más bajo
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all 0.25s ease;
+      z-index: -1;
+    }
+
+    // Hover animation mejorado sutilmente
+    &:hover {
+      transform: translateY(3px);
+
+      // Glow adicional moderado en hover
+      box-shadow: 0px -4px 20px 0px rgba($primary-color, 0.35) inset,
+        0px 0px 8px 0px rgba($primary-color, 0.15) inset,
+        0px 0px 10px 2px rgba($primary-color, 0.08); // Glow externo sutil
+
+      &::after {
+        opacity: 0.7; // Moderadamente más intenso
+        height: 45px; // Crece ligeramente
+        width: 90%;
+      }
+    }
+
+    // Text must be on top
+    span {
+      position: relative;
+      z-index: 2;
+
+      // Asegurar que el color se aplique al Typography
+      * {
+        color: rgba($primary-light, 0.92) !important;
+        text-shadow: 0px 0px 4px rgba($primary-light, 0.2); // Sombra de texto sutil
+      }
+    }
+  }
+
+  // Introduction
+  &__intro-section {
+    max-width: 900px;
+    margin: 0 auto $spacing-xxxl;
+    padding-bottom: $spacing-xl;
+    border-bottom: 1px solid rgba($text-tertiary, 0.1);
+  }
+
+  &__intro-text {
+  }
+
+  // Content layout
+  &__content-layout {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__main-content {
+    @include flex($direction: column, $gap: $spacing-xxxl);
+  }
+
+  // Sections
+  &__section {
+    position: relative;
+  }
+
+  &__section-header {
+    @include flex($gap: $spacing-md, $align: center);
+    margin-bottom: $spacing-xl;
+  }
+
+  &__section-indicator {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $primary-color;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba($primary-color, 0.1);
+  }
+
+  &__section-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    position: relative;
+
+    @include mobile-medium {
+      font-size: 1.75rem !important;
+    }
+  }
+
+  &__section-content {
+    @include flex($direction: column, $gap: $spacing-xl);
+  }
+
+  &__paragraph {
+    font-size: 1.125rem !important;
+    line-height: 1.8 !important;
+    color: $text-secondary-90 !important;
+
+    @include mobile-medium {
+      font-size: 1rem !important;
+    }
+  }
+
+  // CTA button
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-xl;
+    background: linear-gradient(90deg, $primary-color, $primary-dark);
+    color: $white-color;
+    text-decoration: none;
+    border-radius: $border-radius-md;
+    @include transition(transform, box-shadow);
+    margin-top: $spacing-xxl;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+      );
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    @include hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba($primary-color, 0.2);
+
+      &::before {
+        transform: translateX(100%);
+      }
+
+      .project-details__cta-arrow {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  &__cta-arrow {
+    @include transition(transform);
+    display: flex;
+    margin-block: $spacing-md;
+  }
+
+  // Footer
+  &__footer {
+    margin-top: $spacing-xxxl;
+    padding-block: $spacing-xl;
+    border-top: 1px solid rgba($text-tertiary, 0.1);
+  }
+
+  &__footer-content {
+    @include flex($direction: column, $gap: $spacing-xs);
+  }
+
+  &__footer-brand {
+    font-weight: 600 !important;
+    color: $text-secondary !important;
+  }
+
+  &__footer-copyright {
+    color: $text-tertiary !important;
+  }
+
+  &__footer-project {
+    color: $text-tertiary !important;
+  }
+}

@@ -1,34 +1,313 @@
 {
   "title": "Featured Projects",
-  "subtitle": "A collection of my recent work showcasing my skills and expertise in web development",
+  "subtitle": "A collection of my recent work showcasing my skills and experience in web development",
   "projects": [
     {
-      "id": "supreme-barf-canine",
-      "title": "Supreme BARF Canine E-commerce",
-      "description": "E-commerce specialized in natural dog food, with an intuitive interface, portion calculator, and discount package system. Designed to provide a smooth shopping experience for pet owners.",
-      "technologies": ["React", "Next.js", "TypeScript", "SASS", "GSAP", "Formik", "Shopify API"],
+      "id": "bunkhouse-hotels",
+      "title": "Bunkhouse Hotels",
+      "description": "Specialized frontend development for a boutique hotel digital platform, implementing modern interfaces and advanced functionalities with Next.js and TypeScript that optimize user experience and facilitate dynamic content management for each property.",
+      "introText": "For this project, we worked closely with Wallop, a company specialized in developing websites for hotel chains in the United States and Canada. As part of Nebulosa Studio, I handled the complete frontend development of the Bunkhouse Hotels platform, implementing a scalable architecture that integrates seamlessly with WordPress as CMS.",
+      "client": "Wallop",
+      "projectType": "Frontend Development",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "Single Page Applications",
+        "CMS Integration",
+        "API Management"
+      ],
+      "technologies": [
+        "Next.js 12",
+        "TypeScript",
+        "React 18",
+        "WordPress REST API",
+        "SASS",
+        "Google Maps API",
+        "Swiper.js",
+        "Formik",
+        "Google Analytics 4"
+      ],
       "images": [
         {
-          "src": "/images/portfolio/supreme-barf-hero.png",
-          "alt": "Hero section of the Supreme BARF Canine site showcasing natural dog food"
+          "src": "/images/portfolio/bunkhouse.png",
+          "alt": "Bunkhouse Hotels hero section featuring immersive brand experience and navigation"
+        },
+        {
+          "src": "/images/portfolio/bunkhouse-2.png",
+          "alt": "Newsletter section with email subscription and brand messaging"
+        },
+        {
+          "src": "/images/portfolio/bunkhouse-3.png",
+          "alt": "E-commerce integration showing product catalog and booking interface"
+        }
+      ],
+      "whatWeDid": [
+        "I developed the complete frontend architecture using Next.js 12 with TypeScript, implementing a modern and responsive design that reflects the unique identity of each Bunkhouse Hotels property. The implementation includes reusable components, performance optimization with SSR/SSG, and seamless integration with WordPress through its REST API.",
+        "I configured the complete integration with WordPress as a headless CMS using Advanced Custom Fields (ACF), allowing the Bunkhouse team to easily update content, images, and reservations without technical knowledge. I implemented WPAPI for efficient backend communication and state management with Next.js.",
+        "I developed specific functionalities such as the booking system integrated with third parties, Google Maps API implementation to show locations, interactive carousels with Swiper.js, and optimized forms with Formik and Yup validation. I also integrated Google Analytics 4 for tracking user metrics and conversions."
+      ],
+      "finalProduct": "The result is a robust and scalable digital platform that has significantly improved Bunkhouse Hotels' online presence. The Next.js architecture with TypeScript ensures maintainable and scalable code, while the headless integration with WordPress provides complete flexibility for content management. The site offers an exceptional user experience with optimized loading times, intuitive navigation, and advanced functionalities that have resulted in increased engagement and conversions.",
+      "liveUrl": "https://www.bunkhousehotels.com/",
+      "githubUrl": ""
+    },
+    {
+      "id": "scandinave-spa",
+      "title": "Scandinave Spa",
+      "description": "Complete frontend development for the digital platform of Canada's leading Nordic spa chain, with an optimized Next.js architecture that translates the tranquil and mindful experience of their physical spas into an elegant and functional digital interface.",
+      "introText": "As part of the Nebulosa Studio team, I developed the complete frontend solution for the Scandinave Spa website, working in collaboration with Wallop to create a digital experience that honors the brand's wellness philosophy. The technical implementation focused on creating a scalable platform that facilitates both content management and user experience.",
+      "client": "Wallop",
+      "projectType": "Frontend Development",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "SPA Development",
+        "API Integration",
+        "Performance Optimization"
+      ],
+      "technologies": [
+        "Next.js 12",
+        "React 17",
+        "TypeScript",
+        "SASS",
+        "Google Maps API",
+        "React Big Calendar",
+        "Formik",
+        "Flickity",
+        "React Player",
+        "WordPress REST API"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/scandinave.png",
+          "alt": "Scandinave Spa homepage showcasing serene aesthetics and natural elements"
+        },
+        {
+          "src": "/images/portfolio/scandinave-3.png",
+          "alt": "Destinations page showing the four iconic Scandinave Spa locations in Canada"
+        },
+        {
+          "src": "/images/portfolio/scandinave-2.png",
+          "alt": "Destinations page showing the four iconic Scandinave Spa locations in Canada"
+        }
+      ],
+      "whatWeDid": [
+        "I developed the frontend architecture using Next.js 12 with TypeScript, implementing a responsive design that reflects the brand's serene aesthetic. I created reusable components that allow for easy maintenance and code scalability, ensuring that the user experience is consistent across all pages and devices.",
+        "I implemented the complete integration with WordPress as a headless CMS, configuring efficient communication with the REST API for dynamic content management. I developed interactive map systems using Google Maps API to show the four spa locations, and booking calendars with React Big Calendar to manage service availability.",
+        "I optimized site performance by implementing SSG/SSR techniques with Next.js to improve loading times, and configured React Player for multimedia content integration. I developed custom sliders with Flickity to display spa images, and optimized forms with Formik and Yup validation for booking and contact processes."
+      ],
+      "finalProduct": "The final platform represents a successful technical implementation that meets both functional requirements and Scandinave Spa's design vision. The website delivers an optimized experience with improved loading times, intuitive navigation, and robust functionalities for managing bookings and content. The scalable Next.js architecture ensures the site can grow with the brand, while the WordPress integration provides flexibility for content updates without touching the frontend code.",
+      "liveUrl": "https://www.scandinave.com/",
+      "githubUrl": ""
+    },
+    {
+      "id": "financiera-independencia",
+      "title": "Financiera Independencia - Grupo Findep",
+      "description": "Frontend development for Financiera Independencia's credit products platform, part of the Grupo Findep ecosystem, featuring advanced loan calculators, multiple credit products (employees, retirees, entrepreneurs) and optimized digital application process.",
+      "introText": "As part of the Grupo Findep development team, I contribute to the development and maintenance of the Financiera Independencia platform, one of the main brands of the financial group. This project uses the shared microservices architecture that we implement across all the group's platforms, working with Agile methodologies to deliver innovative functionalities in the credit sector.",
+      "client": "Grupo Findep - Financiera Independencia",
+      "projectType": "Fintech Platform - Credit Products",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "Frontend Microservices",
+        "Agile Methodologies",
+        "Frontend DevOps",
+        "Automated Testing"
+      ],
+      "technologies": [
+        "Gatsby 3",
+        "React 16",
+        "TypeScript",
+        "Material-UI",
+        "Emotion",
+        "Azure DevOps",
+        "Microservices",
+        "Jest Testing",
+        "PDF Make",
+        "React Signature Canvas",
+        "React QR Code"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/fisa-1.png",
+          "alt": "Financiera Independencia loan calculator showing payment options and amortization table"
+        },
+        {
+          "src": "/images/portfolio/fisa-2.png",
+          "alt": "Product showcase page showing various loan options with clear comparison"
+        }
+      ],
+      "whatWeDid": [
+        "Development of the frontend interface for Financiera Independencia using Gatsby and React, implementing advanced loan calculators that allow users to customize amounts, terms, and payment frequencies for different profiles (employees, retirees, entrepreneurs). I work in 2-week Agile sprints contributing to brand-specific features while maintaining consistency within the Findep ecosystem.",
+        "Implementation of digital processes that reduce loan application time to just 10 minutes, including automatic eligibility verification, document upload, electronic signature with React Signature Canvas, and QR code generation. Integration with credit scoring APIs and banking systems to automate the approval process while maintaining high security standards.",
+        "Collaboration in the development of reusable components of the Findep ecosystem, performance optimization with lazy loading techniques, and participation in automated testing with Jest. I contribute to maintaining high code coverage and automated deployments through Azure DevOps pipelines, ensuring quality and stability in all releases."
+      ],
+      "finalProduct": "My contribution to Financiera Independencia is part of the success of Grupo Findep's digital ecosystem, where this platform processes thousands of loans daily while maintaining excellent availability and performance metrics. The microservices architecture allows scalability while Agile methodologies ensure consistent value delivery. The platform has significantly improved conversion rates and customer satisfaction, establishing Financiera Independencia as a leading brand in the Mexican credit sector.",
+      "liveUrl": "https://www.independencia.com.mx/",
+      "githubUrl": ""
+    },
+    {
+      "id": "apoyo-economico",
+      "title": "Apoyo Económico - Grupo Findep",
+      "description": "Frontend development for Apoyo Económico's personal credit platform, part of the Grupo Findep ecosystem, specialized in fast loans with 100% digital processes, advanced payment calculator, and user experience optimized for conversion.",
+      "introText": "As part of the Grupo Findep development team, I contribute to the development and maintenance of the Apoyo Económico platform, a brand specialized in fast personal credits. This project is part of the ecosystem of multiple financial platforms that we manage with Agile methodologies, using the same base architecture of Gatsby and microservices that we implement for other group brands.",
+      "client": "Grupo Findep - Apoyo Económico",
+      "projectType": "Fintech Platform - Personal Credits",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "Fintech User Experience",
+        "Conversion Optimization",
+        "Banking API Integration"
+      ],
+      "technologies": [
+        "Gatsby 3",
+        "React 16",
+        "TypeScript",
+        "Material-UI",
+        "Emotion",
+        "Azure DevOps",
+        "Microservices",
+        "Jest Testing",
+        "PDF Make",
+        "React Signature Canvas",
+        "Google Analytics"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/aef-1.png",
+          "alt": "Apoyo Económico loan calculator with flexible payment options"
+        },
+        {
+          "src": "/images/portfolio/aef-2.png",
+          "alt": "Apoyo Económico loan calculator with flexible payment options"
+        },
+        {
+          "src": "/images/portfolio/aef-3.png",
+          "alt": "Simplified 3-step application process for personal credits"
+        }
+      ],
+      "whatWeDid": [
+        "Development of the frontend interface for Apoyo Económico using the shared Gatsby with React architecture, implementing brand-specific components that maintain consistency within the Findep ecosystem. I work in 2-week Agile sprints, developing features such as personalized loan calculators, optimized application forms, and loan status tracking screens.",
+        "Implementation of user experiences specific to the fast personal credit segment, including mobile-optimized onboarding flows, real-time document validation, and digital signature functionalities. Integration with banking APIs for account verification and payment processing, maintaining financial security standards.",
+        "Collaboration in the development of shared functionalities of the Findep ecosystem, such as the unified credit scoring system, reusable UI components, and analytics modules. Participation in code reviews, automated testing with Jest, and performance optimization to maintain loading times under 3 seconds in the mobile experience."
+      ],
+      "finalProduct": "Apoyo Económico represents a successful implementation of Grupo Findep's frontend microservices model, specifically adapted for the fast personal credit market. The platform maintains an optimized conversion rate and excellent performance metrics, benefiting from shared infrastructure and best practices established in the Findep ecosystem. My work contributes to a smooth user experience that has positioned Apoyo Económico as a competitive option in the personal loans market in Mexico.",
+      "liveUrl": "https://www.apoyoeconomico.com.mx/",
+      "githubUrl": ""
+    },
+    {
+      "id": "kontak-retriever",
+      "title": "Kontak Retriever",
+      "description": "Frontend development for a next-generation veterinary web application that automates call information retrieval and pet records, integrating multiple PIMS systems with a modern Next.js 13 and Node.js backend architecture.",
+      "introText": "As part of the Nebulosa Studio development team, I contributed significantly to the frontend interface implementation of Kontak Retriever, an application that transforms call management in veterinary clinics. My participation in this challenging project included developing key components that connect phone systems with multiple PIMS (Practice Information Management Systems), delivering critical information in real-time.",
+      "client": "Kontak",
+      "projectType": "Frontend Development",
+      "platform": "Web and Desktop",
+      "expertise": [
+        "Frontend Development",
+        "API Integration",
+        "Real-time Data Management",
+        "Complex UI/UX Implementation"
+      ],
+      "technologies": [
+        "Next.js 13",
+        "React 18",
+        "TypeScript",
+        "Node.js",
+        "GraphQL",
+        "Socket.io",
+        "SASS",
+        "React Query",
+        "Formik",
+        "Redis"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/kontak-1.png",
+          "alt": "Kontak Retriever dashboard showing real-time call information and pet details"
+        },
+        {
+          "src": "/images/portfolio/kontak-2.png",
+          "alt": "Appointment scheduling interface with integrated calendar view"
+        }
+      ],
+      "whatWeDid": [
+        "As part of the Nebulosa Studio team, I participated in implementing the frontend architecture using Next.js 13 with App Router and TypeScript, developing specific components that handle real-time data from multiple PIMS systems. I contributed to configuring communication with the Node.js backend through GraphQL and collaborated on WebSocket integration for instant updates.",
+        "Working from Nebulosa Studio, I collaborated in developing advanced components for real-time call management, including specific dashboard sections that display pet and owner information. My work included implementing state logic with React Query and integration with APIs from systems like Rhapsody, Vetspire, and Digitail.",
+        "My contribution from Nebulosa Studio focused on developing specialized interfaces, especially in the appointment system and calendar components synchronized with multiple PIMS. I also worked on optimizing the performance of critical components, implementing lazy loading techniques and efficient handling of large data volumes."
+      ],
+      "finalProduct": "My contribution to the Kontak Retriever project helped create a user experience that has transformed veterinary clinic operations. The components I developed respond instantly to incoming calls, contributing to showing relevant information in less than 2 seconds. The collaborative implementation with Next.js 13 and efficient integration with the Node.js backend allows handling multiple clinics simultaneously. My work has been an integral part of a tool that has significantly reduced staff response times and improved customer service quality in the veterinary sector.",
+      "liveUrl": "https://petdesk.com/veterinary-phone-system/",
+      "githubUrl": ""
+    },
+    {
+      "id": "supreme-barf-canine",
+      "title": "Supreme BARF E-commerce",
+      "description": "E-commerce specialized in natural dog food, featuring an intuitive interface, portion calculator, and package discount system. Designed to provide a smooth shopping experience for pet owners.",
+      "introText": "In the constantly evolving e-commerce landscape, we've created a digital solution that puts dog health first. Supreme BARF Canine stands out as a specialized platform where quality meets user experience, offering pet owners an intuitive journey towards natural nutrition for their furry companions.",
+      "client": "Supreme BARF Canine",
+      "projectType": "E-commerce Development",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "UX/UI Design",
+        "E-commerce"
+      ],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "SASS",
+        "GSAP",
+        "Formik",
+        "Shopify API"
+      ],
+      "images": [
+        {
+          "src": "/images/portfolio/supreme-barf-banana.png",
+          "alt": "Main section of Supreme BARF Canine site showcasing natural dog food"
         },
         {
           "src": "/images/portfolio/supreme-barf-about.png",
-          "alt": "About the Food page displaying the benefits of natural dog products"
+          "alt": "About Feeding page showing benefits of natural dog products"
         }
       ],
+      "whatWeDid": [
+        "We developed a comprehensive e-commerce solution focused on natural dog nutrition. The platform features an intuitive user interface designed to guide pet owners through a smooth shopping experience, complemented by an innovative portion calculator that provides personalized recommendations based on breed, weight, and activity level.",
+        "One of the standout features is the package discount system, which incentivizes bulk purchases and simplifies the recurring order process. This approach not only improves customer loyalty but also ensures consistent nutrition for pets through regular deliveries.",
+        "The responsive design adapts perfectly to all devices, maintaining the brand's premium feel in both desktop and mobile experiences. Performance optimization was a key focus, resulting in fast loading times even with rich visual content showcasing the product range."
+      ],
+      "finalProduct": "The final Supreme BARF Canine platform offers a perfect balance between aesthetic appeal and functional excellence. The conversion-focused design, combined with educational content about natural dog nutrition, has resulted in significantly higher engagement metrics and larger average order values compared to industry standards.",
       "liveUrl": "https://supremebarfcanine.com",
       "githubUrl": "https://github.com/kap-94/supreme-barf-canine"
     },
     {
       "id": "arkm-suite",
       "title": "ARKM Suite",
-      "description": "Centralized project management portal with interactive dashboard, detailed progress tracking through Gantt timelines, and comprehensive deliverables system, optimized to improve communication between teams and clients.",
-      "technologies": ["React", "TypeScript", "Next.js", "SASS", "RESTful API", "Supabase", "Next Auth Access Control"],
+      "description": "Centralized project management portal with interactive dashboard, detailed progress tracking via Gantt timelines, and comprehensive deliverables system, optimized to improve communication between teams and clients.",
+      "introText": "ARKM Suite represents the next generation of project management tools, addressing the communication gaps that often plague complex collaborations. Built from the ground up with both technical teams and non-technical stakeholders in mind, this platform serves as the central nervous system for project execution and client engagement.",
+      "client": "ARKM Technologies",
+      "projectType": "Web Application Development",
+      "platform": "Web and Desktop PWA",
+      "expertise": [
+        "Frontend Architecture",
+        "UX/UI Design",
+        "Backend Integration"
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "SASS",
+        "RESTful API",
+        "Supabase",
+        "Next Auth Access Control"
+      ],
       "images": [
         {
           "src": "/images/portfolio/arkm-signin.png",
-          "alt": "ARKM Suite portal login page with modern and secure design"
+          "alt": "ARKM Suite portal sign-in page with modern and secure design"
         },
         {
           "src": "/images/portfolio/arkm-design-system.png",
@@ -39,28 +318,58 @@
           "alt": "Gantt timeline view showing project stages and dependencies"
         }
       ],
+      "whatWeDid": [
+        "We designed and implemented a centralized project management solution that provides unprecedented visibility into complex workflows. The interactive dashboard delivers real-time progress updates, resource allocation visualization, and bottleneck identification, enabling proactive project management.",
+        "The Gantt timeline feature was developed with special attention to dependencies and milestone tracking, allowing dynamic adjustments while maintaining clear project trajectory visibility. This visual approach to schedule management has proven particularly valuable for cross-functional teams and client presentations.",
+        "The deliverables system was built around a version-based approach, enabling collaborative review cycles while maintaining a clear audit trail. Each deliverable features customizable approval workflows, automated notifications, and integration with common productivity tools."
+      ],
+      "finalProduct": "ARKM Suite has transformed how teams collaborate on complex projects, drastically reducing communication overhead and misalignment. The platform has shown remarkable results in reducing project delivery times and improving client satisfaction metrics, becoming an indispensable tool for organizations managing multiple concurrent projects with diverse stakeholder groups.",
       "liveUrl": "https://arkm-suite.vercel.app",
       "githubUrl": "https://github.com/kap-94/arkm-suite"
     },
     {
       "id": "trvlr-travel-platform",
       "title": "TRVLR",
-      "description": "Modern travel website with destination search, guides, and blogs. Allows users to explore incredible destinations, plan itineraries, and discover local recommendations with a visually appealing interface.",
-      "technologies": ["React", "Next.js", "TypeScript", "SASS", "Leaflet", "GSAP", "React Slick", "React Datepicker"],
+      "description": "Modern travel website with destination search, guides, and blogs. Allows users to explore incredible destinations, plan itineraries, and discover local recommendations with a visually engaging interface.",
+      "introText": "TRVLR reimagines the digital travel experience by fusing inspiring content with practical planning tools. This platform bridges the gap between dreaming of destinations and actually experiencing them, all within an immersive visual environment that captures the essence of wanderlust.",
+      "client": "TRVLR Experiences",
+      "projectType": "Travel Platform Development",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "UX/UI Design",
+        "Content Strategy"
+      ],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "SASS",
+        "Leaflet",
+        "GSAP",
+        "React Slick",
+        "React Datepicker"
+      ],
       "images": [
         {
           "src": "/images/portfolio/trvlr-hero.png",
-          "alt": "TRVLR main page showcasing international destinations with immersive navigation"
+          "alt": "TRVLR homepage featuring international destinations with immersive navigation"
         },
         {
           "src": "/images/portfolio/trvlr-trips.png",
-          "alt": "Travel itineraries visualization with interactive maps and route planning"
+          "alt": "Trip itinerary visualization with interactive maps and route planning"
         },
         {
           "src": "/images/portfolio/trvlr-why-travel.png",
-          "alt": "Why Travel page with inspirational content and reasons to travel around the world"
+          "alt": "Why Travel page with inspiring content and reasons to explore the world"
         }
       ],
+      "whatWeDid": [
+        "We developed a comprehensive travel platform that balances inspiring content with practical planning tools. The destination search system was built with an advanced filtering mechanism that accounts for travel preferences, seasonality, budget constraints, and activity interests, delivering highly personalized recommendations.",
+        "The interactive map functions were implemented using custom Leaflet components, allowing users to explore destinations visually while accessing key information through intuitive overlays. Each point of interest includes curated content that combines local perspectives with practical visitor information.",
+        "The itinerary builder was designed around a modular drag-and-drop interface, enabling users to construct personalized travel plans while automatically calculating logistical aspects like travel times, optimal visit durations, and accommodation options. The system also provides intelligent suggestions based on proximity and thematic relevance."
+      ],
+      "finalProduct": "TRVLR has successfully established itself as more than just another travel website; it has become a comprehensive companion for the modern traveler. The platform has received praise for its intuitive design, content depth, and innovative planning tools that genuinely enhance the travel experience from inspiration to return. User engagement metrics show significantly longer session times and higher return rates compared to industry averages.",
       "liveUrl": "https://trvlr-xi.vercel.app",
       "githubUrl": "https://github.com/kap-94/trvlr"
     }
