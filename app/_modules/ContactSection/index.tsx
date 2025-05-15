@@ -40,9 +40,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   const currentYear = new Date().getFullYear();
 
   // Set default values if footerDictionary is not provided
-  const copyright = footerDictionary?.copyright
-    ? footerDictionary.copyright.replace("{year}", currentYear.toString())
-    : `© ${currentYear} Designed & Built by Pablo Karam.`;
+  // const copyright = footerDictionary?.copyright
+  //   ? footerDictionary.copyright.replace("{year}", currentYear.toString())
+  //   : `Development & Design © ${currentYear}`;
+
+  const copyright = `Development & Design © ${currentYear}`;
 
   // Ya no necesitamos los navigationItems
   // Solo requerimos el copyright
@@ -82,7 +84,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               <Modal.Open opens="contact-form">
                 <Button
                   size="md"
-                  variant="cosmic-aura-gradient"
+                  // variant="cosmic-aura-gradient"
+                  // variant="modern-shape"
+                  variant="gradient"
                   className={cx("contact-section__action-button")}
                 >
                   {contactText.cta}
@@ -100,10 +104,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       <div className={cx("contact-section__footer-glass")}>
         <div className={cx("contact-section__copyright")}>
           <Typography
-            variant="p3"
             theme="dark"
+            variant="p3"
+            fontFamily="sofia"
+            className={cx("project-details__footer-brand")}
+          >
+            José Pablo Karam Dolores
+          </Typography>
+          <Typography
+            theme="dark"
+            variant="p3"
+            fontFamily="sofia"
             color="tertiary"
-            fontWeight={500}
           >
             {copyright}
           </Typography>

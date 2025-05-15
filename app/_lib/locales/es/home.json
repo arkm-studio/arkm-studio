@@ -153,7 +153,7 @@
         "role": "Senior Frontend Developer",
         "location": "Ciudad de México, México",
         "period": "Abril 2022 - Presente",
-        "description": "Desarrolo de soluciones digitales para el sector financiero, diseñando e implementando interfaces intuitivas y de alto rendimiento. He creado sistemas bancarios utilizando React JS y Flutter Web, optimizando la experiencia de usuario y la eficiencia operativa. Implemento metodologías ágiles para acelerar ciclos de desarrollo y garantizar entregas puntuales.",
+        "description": "Frontend Developer especializado en fintech desarrollando plataformas crediticias con React, Next, Gatsby, Flutter Web y microservicios. Implemento sistemas bancarios integrales y soluciones financieras digitales. Experimentado en Agile, Jest testing y DevOps con Azure, mejorando tasas de conversión y UX con alta seguridad financiera.",
         "technologies": [
           "React",
           "TypeScript",
@@ -171,8 +171,8 @@
         "company": "Nebulosa Studio",
         "role": "Fullstack Developer",
         "location": "Vancouver, Canadá",
-        "period": "2021 - 2022",
-        "description": "Desarrollé soluciones web completas para el sector hotelero y turístico internacional. Trabajé con equipos de diseño implementando experiencias UI/UX excepcionales que aumentaron las tasas de conversión. Apliqué tecnologías de vanguardia y mejores prácticas en desarrollo web, logrando productos optimizados para SEO y con tiempos de carga reducidos.",
+        "period": "Enero 2021 - Abril 2022",
+        "description": "Fullstack Developer especializado en hospitalidad desarrollando plataformas hoteleras escalables con Next.js, TypeScript y React. Implemento arquitectura headless CMS con WordPress API, componentes reutilizables y SSR/SSG para SEO optimizado. Integración de APIs (Google Maps, reservas), performance optimization y experiencias digitales responsive que mejoran conversiones hoteleras.",
         "technologies": [
           "React",
           "Node.js",
@@ -190,8 +190,8 @@
         "company": "DOKA Systems",
         "role": "Web Developer",
         "location": "Puebla, México",
-        "period": "2019 - 2021",
-        "description": "Participé en el desarrollo de sistemas internos y la automatización de procesos operativos que incrementaron la eficiencia en la operación. Diseñé soluciones personalizadas para gestión de proyectos de construcción, digitalización de flujos de trabajo y optimización de la cadena de suministro. Se redujeron los tiempos de respuesta y mejoró la toma de decisiones basadas en datos.",
+        "period": "Marzo 2019 - Enero 2021",
+        "description": "Desarrollador de sistemas internos y automatización creando soluciones de gestión de proyectos de construcción y digitalización de workflows. Implemento automatización de procesos operacionales, sistemas ERP/BPM y plataformas digitales.",
         "technologies": [
           "JavaScript",
           "React",
@@ -209,8 +209,8 @@
         "company": "Instituto de Matemáticas, UNAM",
         "role": "Data Analyst",
         "location": "Ciudad de México, México",
-        "period": "2020",
-        "description": "Implementé soluciones de análisis de datos utilizando Azure Cognitive Services para el procesamiento de audio. Realicé tareas de limpieza y preparación de datos para garantizar entradas de alta calidad para el análisis. Apliqué técnicas de tratamiento de datos para estructurar adecuadamente la información y generé informes completos para respaldar la toma de decisiones basadas en evidencia.",
+        "period": "Enero 2020 - Julio 2020",
+        "description": "Analista de datos en investigación COVID implementando soluciones analíticas con Azure Cognitive Services para procesamiento de audio. Realizo data cleaning, preparación de datasets y análisis estructural de entrevistas de pacientes COVID para generar insights basados en evidencia.",
         "technologies": [
           "Azure Cognitive Services",
           "Machine Learning",

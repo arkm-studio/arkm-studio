@@ -73,8 +73,8 @@
           "menu_item_parent": 0,
           "label": "Portfolio",
           "title": "Portfolio",
-          "href": "/portfolio",
-          "url": "/portfolio",
+          "href": "#portfolio",
+          "url": "#portfolio",
           "aria": "Complete Project Portfolio",
           "showDropdownIcon": false,
           "meta": {
