@@ -153,7 +153,7 @@
         "role": "Senior Frontend Developer",
         "location": "Mexico City, Mexico",
         "period": "April 2022 - Present",
-        "description": "Development of digital solutions for the financial sector, designing and implementing intuitive and high-performance interfaces. I've created banking systems using React JS and Flutter Web, optimizing user experience and operational efficiency. I implement agile methodologies to accelerate development cycles and ensure timely deliveries.",
+        "description": "Frontend Developer specialized in fintech building lending platforms with React, Next, Gatsby, Flutter Web & microservices. I implement comprehensive banking systems and digital financial solutions. Experienced in Agile, Jest testing & DevOps with Azure, improving conversion rates and UX with high financial security.",
         "technologies": [
           "React",
           "TypeScript",
@@ -171,8 +171,8 @@
         "company": "Nebulosa Studio",
         "role": "Fullstack Developer",
         "location": "Vancouver, Canada",
-        "period": "2021 - 2022",
-        "description": "I developed complete web solutions for the international hotel and tourism sector. I worked with design teams implementing exceptional UI/UX experiences that increased conversion rates. I applied cutting-edge technologies and best practices in web development, creating products optimized for SEO with significantly reduced load times.",
+        "period": "January 2021 - April 2022",
+        "description": "Fullstack Developer specialized in hospitality building scalable hotel platforms with Next.js, TypeScript & React. I implement headless CMS architecture with WordPress API, reusable components and SSR/SSG for optimized SEO. Expert in API integrations (Google Maps, bookings), performance optimization and responsive digital experiences that boost hotel conversions.",
         "technologies": [
           "React",
           "Node.js",
@@ -190,8 +190,8 @@
         "company": "DOKA Systems",
         "role": "Web Developer",
         "location": "Puebla, Mexico",
-        "period": "2019 - 2021",
-        "description": "Participated in the development of internal systems and the automation of operational processes that increased operational efficiency. Designed customized solutions for construction project management, workflow digitization, and supply chain optimization. Response times were reduced and data-driven decision making improved.",
+        "period": "March 2019 - January 2021",
+        "description": "Internal systems & automation developer creating construction project management solutions and workflow digitization. I implement operational process automation, ERP/BPM systems and digital platforms.",
         "technologies": [
           "JavaScript",
           "React",
@@ -209,8 +209,8 @@
         "company": "Institute of Mathematics, UNAM",
         "role": "Data Analyst",
         "location": "Mexico City, Mexico",
-        "period": "2020",
-        "description": "I implemented data analysis solutions using Azure Cognitive Services for audio processing. I performed data cleaning and preparation tasks to ensure high quality inputs for analysis. I applied data treatment techniques to structure information properly and generated comprehensive reports to support evidence-based decision making.",
+        "period": "January 2020 - July 2020",
+        "description": "Data analyst in COVID research implementing analytical solutions with Azure Cognitive Services for audio processing. I perform data cleaning, dataset preparation, and structural analysis of COVID patient interviews to generate evidence- based insights.",
         "technologies": [
           "Azure Cognitive Services",
           "Machine Learning",
