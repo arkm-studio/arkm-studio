@@ -20,6 +20,7 @@
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.18.0",
     "@supabase/supabase-js": "^2.47.9",
+    "@vercel/speed-insights": "^1.2.0",
     "classnames": "^2.5.1",
     "clear": "^0.1.0",
     "date-fns": "^4.1.0",
@@ -66,7 +67,6 @@
     "@types/three": "^0.172.0",
     "@vitejs/plugin-react": "^4.3.4",
     "happy-dom": "^16.3.0",
-    "typescript": "^5",
-    "vitest": "^2.1.8"
+    "typescript": "^5"
   }
 }
