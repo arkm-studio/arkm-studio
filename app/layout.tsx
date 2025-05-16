@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { inter } from "./_lib/fonts";
 import GoogleAnalytics from "./_components/GoogleAnalytics";
 import "@/app/_styles/globals.scss";
@@ -29,7 +30,10 @@ export default function RootLayout({
         />
         <GoogleAnalytics />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
