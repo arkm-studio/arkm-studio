@@ -84,7 +84,7 @@ export default async function Home({
     return {
       id: project.id,
       title: project.title,
-      featured_image: getImageSrc(project.images?.[0]),
+      featured_image: getImageSrc(project.featuredImage),
       slug: project.id,
       client: project.client,
       projectType: project.projectType,

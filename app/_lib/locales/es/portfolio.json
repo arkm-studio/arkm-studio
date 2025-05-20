@@ -27,6 +27,10 @@
         "Formik",
         "Google Analytics 4"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/bunkhouse-card.png",
+        "alt": "Sección hero de Bunkhouse Hotels con experiencia de marca inmersiva y navegación"
+      },
       "images": [
         {
           "src": "/images/portfolio/bunkhouse.png",
@@ -51,6 +55,57 @@
       "githubUrl": ""
     },
     {
+      "id": "financiera-independencia",
+      "title": "Financiera Independencia - Grupo Findep",
+      "description": "Desarrollo frontend para plataforma de productos crediticios de Financiera Independencia, parte del ecosistema Grupo Findep, con calculadora de préstamos avanzada, múltiples productos crediticios (empleados, pensionados, empresarios) y proceso de solicitud digital optimizado.",
+      "introText": "Como parte del equipo de desarrollo de Grupo Findep, contribuyo al desarrollo y mantenimiento de la plataforma de Financiera Independencia, una de las marcas principales del grupo financiero. Este proyecto utiliza la arquitectura compartida de microservicios que implementamos across todas las plataformas del grupo, trabajando con metodologías Agile para entregar funcionalidades innovadoras en el sector crediticio.",
+      "client": "Grupo Findep - Financiera Independencia",
+      "projectType": "Plataforma Fintech - Productos Crediticios",
+      "platform": "Web y Móvil",
+      "expertise": [
+        "Desarrollo Frontend",
+        "Microservicios Frontend",
+        "Methodologías Agile",
+        "DevOps Frontend",
+        "Testing Automatizado"
+      ],
+      "technologies": [
+        "Gatsby 3",
+        "React 16",
+        "TypeScript",
+        "Material-UI",
+        "Emotion",
+        "Azure DevOps",
+        "Microservicios",
+        "Jest Testing",
+        "PDF Make",
+        "React Signature Canvas",
+        "React QR Code"
+      ],
+      "featuredImage": {
+        "src": "/images/portfolio/fisa-card.png",
+        "alt": "Calculadora de préstamos de Financiera Independencia mostrando opciones de pago y tabla de amortización"
+      },
+      "images": [
+        {
+          "src": "/images/portfolio/fisa-1.png",
+          "alt": "Calculadora de préstamos de Financiera Independencia mostrando opciones de pago y tabla de amortización"
+        },
+        {
+          "src": "/images/portfolio/fisa-2.png",
+          "alt": "Página de presentación de productos mostrando las diversas opciones de préstamos con comparación clara"
+        }
+      ],
+      "whatWeDid": [
+        "Desarrollo de la interfaz frontend para Financiera Independencia utilizando Gatsby y React, implementando calculadoras avanzadas de préstamos que permiten a los usuarios personalizar montos, plazos y frecuencias de pago para diferentes perfiles (empleados, pensionados, empresarios). Trabajo en sprints Agile de 2 semanas contribuyendo a features específicas de la marca mientras mantengo la consistencia del ecosistema Findep.",
+        "Implementación de procesos digitales que reducen el tiempo de solicitud de préstamos a solo 10 minutos, incluyendo verificación de elegibilidad automática, carga de documentos, firma electrónica con React Signature Canvas y generación de códigos QR. Integración con APIs de scoring crediticio y sistemas bancarios para automatizar el proceso de aprobación mientras mantengo altos estándares de seguridad.",
+        "Colaboración en el desarrollo de componentes reutilizables del ecosistema Findep, optimización de performance con técnicas de lazy loading, y participación en testing automatizado con Jest. Contribuyo a mantener una cobertura de código alta y deploys automatizados através de Azure DevOps pipelines, asegurando calidad y estabilidad en todas las releases."
+      ],
+      "finalProduct": "Mi contribución a Financiera Independencia forma parte del éxito del ecosistema digital de Grupo Findep, donde esta plataforma procesa miles de préstamos diariamente manteniendo excelentes métricas de disponibilidad y rendimiento. La arquitectura de microservicios permite escalabilidad mientras las metodologías Agile aseguran entregas consistentes de valor. La plataforma ha mejorado significativamente las tasas de conversión y la satisfacción del cliente, estableciendo a Financiera Independencia como una marca líder en el sector crediticio mexicano.",
+      "liveUrl": "https://www.independencia.com.mx/",
+      "githubUrl": ""
+    },
+     {
       "id": "scandinave-spa",
       "title": "Scandinave Spa",
       "description": "Desarrollo frontend completo para la plataforma digital de la cadena líder de spas nórdicos en Canadá, con una arquitectura Next.js optimizada que traduce la experiencia tranquila y consciente de sus spas físicos en una interfaz digital elegante y funcional.",
@@ -76,6 +131,10 @@
         "React Player",
         "WordPress REST API"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/scandinave-card.png",
+        "alt": "Página de inicio de Scandinave Spa mostrando la estética serena y elementos naturales"
+      },
       "images": [
         {
           "src": "/images/portfolio/scandinave.png",
@@ -99,53 +158,7 @@
       "liveUrl": "https://www.scandinave.com/",
       "githubUrl": ""
     },
-   {
-  "id": "financiera-independencia",
-  "title": "Financiera Independencia - Grupo Findep",
-  "description": "Desarrollo frontend para plataforma de productos crediticios de Financiera Independencia, parte del ecosistema Grupo Findep, con calculadora de préstamos avanzada, múltiples productos crediticios (empleados, pensionados, empresarios) y proceso de solicitud digital optimizado.",
-  "introText": "Como parte del equipo de desarrollo de Grupo Findep, contribuyo al desarrollo y mantenimiento de la plataforma de Financiera Independencia, una de las marcas principales del grupo financiero. Este proyecto utiliza la arquitectura compartida de microservicios que implementamos across todas las plataformas del grupo, trabajando con metodologías Agile para entregar funcionalidades innovadoras en el sector crediticio.",
-  "client": "Grupo Findep - Financiera Independencia",
-  "projectType": "Plataforma Fintech - Productos Crediticios",
-  "platform": "Web y Móvil",
-  "expertise": [
-    "Desarrollo Frontend",
-    "Microservicios Frontend",
-    "Methodologías Agile", 
-    "DevOps Frontend",
-    "Testing Automatizado"
-  ],
-  "technologies": [
-    "Gatsby 3",
-    "React 16",
-    "TypeScript",
-    "Material-UI",
-    "Emotion",
-    "Azure DevOps",
-    "Microservicios",
-    "Jest Testing",
-    "PDF Make",
-    "React Signature Canvas",
-    "React QR Code"
-  ],
-  "images": [
-    {
-      "src": "/images/portfolio/fisa-1.png",
-      "alt": "Calculadora de préstamos de Financiera Independencia mostrando opciones de pago y tabla de amortización"
-    },
-    {
-      "src": "/images/portfolio/fisa-2.png",
-      "alt": "Página de presentación de productos mostrando las diversas opciones de préstamos con comparación clara"
-    }
-  ],
-  "whatWeDid": [
-    "Desarrollo de la interfaz frontend para Financiera Independencia utilizando Gatsby y React, implementando calculadoras avanzadas de préstamos que permiten a los usuarios personalizar montos, plazos y frecuencias de pago para diferentes perfiles (empleados, pensionados, empresarios). Trabajo en sprints Agile de 2 semanas contribuyendo a features específicas de la marca mientras mantengo la consistencia del ecosistema Findep.",
-    "Implementación de procesos digitales que reducen el tiempo de solicitud de préstamos a solo 10 minutos, incluyendo verificación de elegibilidad automática, carga de documentos, firma electrónica con React Signature Canvas y generación de códigos QR. Integración con APIs de scoring crediticio y sistemas bancarios para automatizar el proceso de aprobación mientras mantengo altos estándares de seguridad.",
-    "Colaboración en el desarrollo de componentes reutilizables del ecosistema Findep, optimización de performance con técnicas de lazy loading, y participación en testing automatizado con Jest. Contribuyo a mantener una cobertura de código alta y deploys automatizados através de Azure DevOps pipelines, asegurando calidad y estabilidad en todas las releases."
-  ],
-  "finalProduct": "Mi contribución a Financiera Independencia forma parte del éxito del ecosistema digital de Grupo Findep, donde esta plataforma procesa miles de préstamos diariamente manteniendo excelentes métricas de disponibilidad y rendimiento. La arquitectura de microservicios permite escalabilidad mientras las metodologías Agile aseguran entregas consistentes de valor. La plataforma ha mejorado significativamente las tasas de conversión y la satisfacción del cliente, estableciendo a Financiera Independencia como una marca líder en el sector crediticio mexicano.",
-  "liveUrl": "https://www.independencia.com.mx/",
-  "githubUrl": ""
-},
+   
     {
       "id": "apoyo-economico",
       "title": "Apoyo Económico - Grupo Findep",
@@ -173,6 +186,10 @@
         "React Signature Canvas",
         "Google Analytics"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/aef-card.png",
+        "alt": "Calculadora de préstamos de Apoyo Económico con opciones flexibles de pago"
+      },
       "images": [
         {
           "src": "/images/portfolio/aef-1.png",
@@ -222,6 +239,10 @@
         "Formik",
         "Redis"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/kontak-1.png",
+        "alt": "Panel de Kontak Retriever mostrando información de llamadas en tiempo real y detalles de mascotas"
+      },
       "images": [
         {
           "src": "/images/portfolio/kontak-1.png",
@@ -249,11 +270,7 @@
       "client": "Supreme BARF Canine",
       "projectType": "Desarrollo de E-commerce",
       "platform": "Web y Móvil",
-      "expertise": [
-        "Desarrollo Frontend",
-        "Diseño UX/UI",
-        "E-commerce"
-      ],
+      "expertise": ["Desarrollo Frontend", "Diseño UX/UI", "E-commerce"],
       "technologies": [
         "React",
         "Next.js",
@@ -263,9 +280,13 @@
         "Formik",
         "Shopify API"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/supreme-barf-card.png",
+        "alt": "Sección principal del sitio Supreme BARF Canine mostrando alimentos naturales para perros"
+      },
       "images": [
         {
-          "src": "/images/portfolio/supreme-barf-banana.png",
+          "src": "/images/portfolio/supreme-barf-hero.png",
           "alt": "Sección principal del sitio Supreme BARF Canine mostrando alimentos naturales para perros"
         },
         {
@@ -304,11 +325,11 @@
         "Supabase",
         "Next Auth Access Control"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/arkm-suite-card.png",
+        "alt": "Página de inicio de sesión del portal ARKM Suite con diseño moderno y seguro"
+      },
       "images": [
-        {
-          "src": "/images/portfolio/arkm-signin.png",
-          "alt": "Página de inicio de sesión del portal ARKM Suite con diseño moderno y seguro"
-        },
         {
           "src": "/images/portfolio/arkm-design-system.png",
           "alt": "Panel del sistema de diseño que muestra componentes UI consistentes y documentación"
@@ -316,6 +337,10 @@
         {
           "src": "/images/portfolio/arkm-timeline-dark.png",
           "alt": "Vista de línea de tiempo Gantt mostrando etapas del proyecto y dependencias"
+        },
+        {
+          "src": "/images/portfolio/arkm-signin.png",
+          "alt": "Página de inicio de sesión del portal ARKM Suite con diseño moderno y seguro"
         }
       ],
       "whatWeDid": [
@@ -350,6 +375,10 @@
         "React Slick",
         "React Datepicker"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/trvlr-hero.png",
+        "alt": "Página principal de TRVLR mostrando destinos internacionales con navegación inmersiva"
+      },
       "images": [
         {
           "src": "/images/portfolio/trvlr-hero.png",

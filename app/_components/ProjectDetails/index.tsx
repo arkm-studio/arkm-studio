@@ -399,12 +399,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 <div className={cx("project-details__cta-arrow")}>
                   <Button
                     size="lg"
-                    variant="modern-shape"
+                    // variant="modern-shape"
                     // variant="modern-glow"
+                    variant="gradient"
                     href={projectUrl}
                     target="_blank"
-                    // onClick={handleNavigateToWork}
                     className={cx("hero__cta-button")}
+                    // onClick={handleNavigateToWork}
                   >
                     {seeWorkLabel}
                   </Button>

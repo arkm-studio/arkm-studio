@@ -14,6 +14,7 @@ export interface ProjectData {
   platform?: string;
   expertise?: string[];
   technologies: string[];
+  featuredImage: ProjectImage;
   images: ProjectImage[];
   whatWeDid?: string[];
   finalProduct?: string;
