@@ -27,6 +27,10 @@
         "Formik",
         "Google Analytics 4"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/bunkhouse-card.png",
+        "alt": "Bunkhouse Hotels hero section featuring immersive brand experience and navigation"
+      },
       "images": [
         {
           "src": "/images/portfolio/bunkhouse.png",
@@ -48,55 +52,6 @@
       ],
       "finalProduct": "The result is a robust and scalable digital platform that has significantly improved Bunkhouse Hotels' online presence. The Next.js architecture with TypeScript ensures maintainable and scalable code, while the headless integration with WordPress provides complete flexibility for content management. The site offers an exceptional user experience with optimized loading times, intuitive navigation, and advanced functionalities that have resulted in increased engagement and conversions.",
       "liveUrl": "https://www.bunkhousehotels.com/",
-      "githubUrl": ""
-    },
-    {
-      "id": "scandinave-spa",
-      "title": "Scandinave Spa",
-      "description": "Complete frontend development for the digital platform of Canada's leading Nordic spa chain, with an optimized Next.js architecture that translates the tranquil and mindful experience of their physical spas into an elegant and functional digital interface.",
-      "introText": "As part of the Nebulosa Studio team, I developed the complete frontend solution for the Scandinave Spa website, working in collaboration with Wallop to create a digital experience that honors the brand's wellness philosophy. The technical implementation focused on creating a scalable platform that facilitates both content management and user experience.",
-      "client": "Wallop",
-      "projectType": "Frontend Development",
-      "platform": "Web and Mobile",
-      "expertise": [
-        "Frontend Development",
-        "SPA Development",
-        "API Integration",
-        "Performance Optimization"
-      ],
-      "technologies": [
-        "Next.js 12",
-        "React 17",
-        "TypeScript",
-        "SASS",
-        "Google Maps API",
-        "React Big Calendar",
-        "Formik",
-        "Flickity",
-        "React Player",
-        "WordPress REST API"
-      ],
-      "images": [
-        {
-          "src": "/images/portfolio/scandinave.png",
-          "alt": "Scandinave Spa homepage showcasing serene aesthetics and natural elements"
-        },
-        {
-          "src": "/images/portfolio/scandinave-3.png",
-          "alt": "Destinations page showing the four iconic Scandinave Spa locations in Canada"
-        },
-        {
-          "src": "/images/portfolio/scandinave-2.png",
-          "alt": "Destinations page showing the four iconic Scandinave Spa locations in Canada"
-        }
-      ],
-      "whatWeDid": [
-        "I developed the frontend architecture using Next.js 12 with TypeScript, implementing a responsive design that reflects the brand's serene aesthetic. I created reusable components that allow for easy maintenance and code scalability, ensuring that the user experience is consistent across all pages and devices.",
-        "I implemented the complete integration with WordPress as a headless CMS, configuring efficient communication with the REST API for dynamic content management. I developed interactive map systems using Google Maps API to show the four spa locations, and booking calendars with React Big Calendar to manage service availability.",
-        "I optimized site performance by implementing SSG/SSR techniques with Next.js to improve loading times, and configured React Player for multimedia content integration. I developed custom sliders with Flickity to display spa images, and optimized forms with Formik and Yup validation for booking and contact processes."
-      ],
-      "finalProduct": "The final platform represents a successful technical implementation that meets both functional requirements and Scandinave Spa's design vision. The website delivers an optimized experience with improved loading times, intuitive navigation, and robust functionalities for managing bookings and content. The scalable Next.js architecture ensures the site can grow with the brand, while the WordPress integration provides flexibility for content updates without touching the frontend code.",
-      "liveUrl": "https://www.scandinave.com/",
       "githubUrl": ""
     },
     {
@@ -127,6 +82,10 @@
         "React Signature Canvas",
         "React QR Code"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/fisa-card.png",
+        "alt": "Financiera Independencia loan calculator showing payment options and amortization table"
+      },
       "images": [
         {
           "src": "/images/portfolio/fisa-1.png",
@@ -144,6 +103,59 @@
       ],
       "finalProduct": "My contribution to Financiera Independencia is part of the success of Grupo Findep's digital ecosystem, where this platform processes thousands of loans daily while maintaining excellent availability and performance metrics. The microservices architecture allows scalability while Agile methodologies ensure consistent value delivery. The platform has significantly improved conversion rates and customer satisfaction, establishing Financiera Independencia as a leading brand in the Mexican credit sector.",
       "liveUrl": "https://www.independencia.com.mx/",
+      "githubUrl": ""
+    },
+    {
+      "id": "scandinave-spa",
+      "title": "Scandinave Spa",
+      "description": "Complete frontend development for the digital platform of Canada's leading Nordic spa chain, with an optimized Next.js architecture that translates the tranquil and mindful experience of their physical spas into an elegant and functional digital interface.",
+      "introText": "As part of the Nebulosa Studio team, I developed the complete frontend solution for the Scandinave Spa website, working in collaboration with Wallop to create a digital experience that honors the brand's wellness philosophy. The technical implementation focused on creating a scalable platform that facilitates both content management and user experience.",
+      "client": "Wallop",
+      "projectType": "Frontend Development",
+      "platform": "Web and Mobile",
+      "expertise": [
+        "Frontend Development",
+        "SPA Development",
+        "API Integration",
+        "Performance Optimization"
+      ],
+      "technologies": [
+        "Next.js 12",
+        "React 17",
+        "TypeScript",
+        "SASS",
+        "Google Maps API",
+        "React Big Calendar",
+        "Formik",
+        "Flickity",
+        "React Player",
+        "WordPress REST API"
+      ],
+      "featuredImage": {
+        "src": "/images/portfolio/scandinave-card.png",
+        "alt": "Scandinave Spa homepage showcasing serene aesthetics and natural elements"
+      },
+      "images": [
+        {
+          "src": "/images/portfolio/scandinave.png",
+          "alt": "Scandinave Spa homepage showcasing serene aesthetics and natural elements"
+        },
+        {
+          "src": "/images/portfolio/scandinave-3.png",
+          "alt": "Destinations page showing the four iconic Scandinave Spa locations in Canada"
+        },
+        {
+          "src": "/images/portfolio/scandinave-2.png",
+          "alt": "Destinations page showing the four iconic Scandinave Spa locations in Canada"
+        }
+      ],
+      "whatWeDid": [
+        "I developed the frontend architecture using Next.js 12 with TypeScript, implementing a responsive design that reflects the brand's serene aesthetic. I created reusable components that allow for easy maintenance and code scalability, ensuring that the user experience is consistent across all pages and devices.",
+        "I implemented the complete integration with WordPress as a headless CMS, configuring efficient communication with the REST API for dynamic content management. I developed interactive map systems using Google Maps API to show the four spa locations, and booking calendars with React Big Calendar to manage service availability.",
+        "I optimized site performance by implementing SSG/SSR techniques with Next.js to improve loading times, and configured React Player for multimedia content integration. I developed custom sliders with Flickity to display spa images, and optimized forms with Formik and Yup validation for booking and contact processes."
+      ],
+      "finalProduct": "The final platform represents a successful technical implementation that meets both functional requirements and Scandinave Spa's design vision. The website delivers an optimized experience with improved loading times, intuitive navigation, and robust functionalities for managing bookings and content. The scalable Next.js architecture ensures the site can grow with the brand, while the WordPress integration provides flexibility for content updates without touching the frontend code.",
+      "liveUrl": "https://www.scandinave.com/",
       "githubUrl": ""
     },
     {
@@ -173,6 +185,10 @@
         "React Signature Canvas",
         "Google Analytics"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/aef-card.png",
+        "alt": "Apoyo Económico loan calculator with flexible payment options"
+      },
       "images": [
         {
           "src": "/images/portfolio/aef-1.png",
@@ -222,6 +238,10 @@
         "Formik",
         "Redis"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/kontak-1.png",
+        "alt": "Kontak Retriever dashboard showing real-time call information and pet details"
+      },
       "images": [
         {
           "src": "/images/portfolio/kontak-1.png",
@@ -249,11 +269,7 @@
       "client": "Supreme BARF Canine",
       "projectType": "E-commerce Development",
       "platform": "Web and Mobile",
-      "expertise": [
-        "Frontend Development",
-        "UX/UI Design",
-        "E-commerce"
-      ],
+      "expertise": ["Frontend Development", "UX/UI Design", "E-commerce"],
       "technologies": [
         "React",
         "Next.js",
@@ -263,9 +279,13 @@
         "Formik",
         "Shopify API"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/supreme-barf-card.png",
+        "alt": "Main section of Supreme BARF Canine site showcasing natural dog food"
+      },
       "images": [
         {
-          "src": "/images/portfolio/supreme-barf-banana.png",
+          "src": "/images/portfolio/supreme-barf-hero.png",
           "alt": "Main section of Supreme BARF Canine site showcasing natural dog food"
         },
         {
@@ -304,11 +324,11 @@
         "Supabase",
         "Next Auth Access Control"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/arkm-suite-card.png",
+        "alt": "ARKM Suite portal sign-in page with modern and secure design"
+      },
       "images": [
-        {
-          "src": "/images/portfolio/arkm-signin.png",
-          "alt": "ARKM Suite portal sign-in page with modern and secure design"
-        },
         {
           "src": "/images/portfolio/arkm-design-system.png",
           "alt": "Design system panel showing consistent UI components and documentation"
@@ -316,6 +336,10 @@
         {
           "src": "/images/portfolio/arkm-timeline-dark.png",
           "alt": "Gantt timeline view showing project stages and dependencies"
+        },
+        {
+          "src": "/images/portfolio/arkm-signin.png",
+          "alt": "ARKM Suite portal sign-in page with modern and secure design"
         }
       ],
       "whatWeDid": [
@@ -335,11 +359,7 @@
       "client": "TRVLR Experiences",
       "projectType": "Travel Platform Development",
       "platform": "Web and Mobile",
-      "expertise": [
-        "Frontend Development",
-        "UX/UI Design",
-        "Content Strategy"
-      ],
+      "expertise": ["Frontend Development", "UX/UI Design", "Content Strategy"],
       "technologies": [
         "React",
         "Next.js",
@@ -350,6 +370,10 @@
         "React Slick",
         "React Datepicker"
       ],
+      "featuredImage": {
+        "src": "/images/portfolio/trvlr-hero.png",
+        "alt": "TRVLR homepage featuring international destinations with immersive navigation"
+      },
       "images": [
         {
           "src": "/images/portfolio/trvlr-hero.png",
