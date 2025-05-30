@@ -68,44 +68,44 @@
     }
   },
   "solutions": {
-    "title": "Áreas de especialización",
-    "subtitle": "Habilidades técnicas para crear soluciones digitales",
+    "title": "Lo que puedo hacer por ti",
+    "subtitle": "Soluciones adaptadas a las necesidades de tu negocio",
     "solutions": [
       {
         "id": "frontend-development",
-        "title": "Desarrollo Front-end",
-        "description": "Especialización principal en tecnologías front-end para crear interfaces dinámicas, responsivas y de alto rendimiento.",
+        "title": "Sitios web y aplicaciones atractivas",
+        "description": "Creo sitios web y aplicaciones impactantes y fáciles de usar que funcionan perfectamente en todos los dispositivos y cargan rápidamente.",
         "features": [
           {
-            "title": "Ecosistema React & TypeScript",
-            "description": "Dominio avanzado de React.js, TypeScript, Next.js, Redux, Context API y más tecnologías para crear interfaces dinámicas, tipadas y con rendimiento optimizado."
+            "title": "Experiencias web modernas",
+            "description": "Construyo sitios web que no solo se ven geniales sino que también funcionan excepcionalmente bien, asegurando que tus visitantes tengan una experiencia fluida y agradable."
           },
           {
-            "title": "Animaciones y CSS Avanzado",
-            "description": "Creación de experiencias interactivas con CSS animations, GSAP, Framer Motion, Three.js y WebGL para interfaces con movimiento fluido e impacto visual."
+            "title": "Animaciones y efectos cautivadores",
+            "description": "Doy vida a tu presencia digital con animaciones suaves y efectos visuales que captan la atención y guían a los usuarios a través de tu contenido."
           },
           {
-            "title": "Desarrollo Multiplataforma",
-            "description": "Experiencia con Flutter y Dart para crear aplicaciones móviles y web con una única base de código, entregando experiencias nativas de alta calidad en múltiples plataformas."
+            "title": "Aplicaciones web",
+            "description": "Desarrollo aplicaciones web que funcionan sin problemas en teléfonos, tablets y computadoras, ofreciendo a tus usuarios una experiencia consistente sin importar el dispositivo que utilicen."
           }
         ]
       },
       {
         "id": "fullstack-skills",
-        "title": "Habilidades Complementarias",
-        "description": "Capacidades técnicas adicionales que me permiten abordar proyectos de forma integral como desarrollador fullstack.",
+        "title": "Soluciones digitales completas",
+        "description": "Ofrezco servicios integrales que cubren todo lo que necesitas para un proyecto digital exitoso.",
         "features": [
           {
-            "title": "Diseño UI/UX Web",
-            "description": "Habilidades de diseño centrado en el usuario, wireframing y prototipos con Figma, creando experiencias usables y atractivas."
+            "title": "Diseño centrado en el usuario",
+            "description": "Creo diseños que no solo son visualmente atractivos sino también intuitivos y fáciles de usar, enfocándome en lo que tus usuarios realmente necesitan."
           },
           {
-            "title": "Backend & Bases de Datos",
-            "description": "Desarrollo de APIs y servicios con Node.js, Express y gestión de bases de datos SQL/NoSQL para crear soluciones fullstack completas."
+            "title": "Sistemas potentes tras bambalinas",
+            "description": "Construyo la tecnología que impulsa tu sitio web o aplicación, incluyendo bases de datos y sistemas que gestionan tu contenido e interacciones con usuarios."
           },
           {
-            "title": "DevOps & Cloud",
-            "description": "Experiencia con Azure DevOps, GCloud, Docker y CI/CD para automatizar procesos y gestionar infraestructura en entornos cloud."
+            "title": "Alojamiento y mantenimiento confiable",
+            "description": "Me aseguro de que tus productos digitales estén alojados de forma segura, actualizados regularmente y optimizados para funcionar sin problemas en todo momento."
           }
         ]
       }
@@ -117,10 +117,7 @@
     "aboutMe": {
       "title": "Más sobre mí",
       "subtitle": "Trayectoria profesional",
-      "roles": [
-        "Fullstack Developer",
-        "UI/UX Designer"
-      ],
+      "roles": ["Fullstack Developer", "UI/UX Designer"],
       "description": "Desarrollador web especializado en crear experiencias digitales excepcionales con más de 5 años de experiencia en el sector financiero e internacional.",
       "paragraphs": [
         "Soy un desarrollador web apasionado por crear interfaces intuitivas y de alto rendimiento que transforman ideas complejas en experiencias digitales excepcionales.",
