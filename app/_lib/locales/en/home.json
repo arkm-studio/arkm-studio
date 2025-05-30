@@ -68,49 +68,49 @@
     }
   },
   "solutions": {
-    "title": "Areas of Specialization",
-    "subtitle": "Technical skills to create digital solutions",
-    "solutions": [
-      {
-        "id": "frontend-development",
-        "title": "Front-end Development",
-        "description": "Primary specialization in front-end technologies to create dynamic, responsive interfaces with high performance.",
-        "features": [
-          {
-            "title": "React & TypeScript Ecosystem",
-            "description": "Advanced proficiency in React.js, TypeScript, Next.js, Redux, Context API, and more technologies to create dynamic, typed interfaces with optimized performance."
-          },
-          {
-            "title": "Advanced Animations & CSS",
-            "description": "Creation of interactive experiences with CSS animations, GSAP, Framer Motion, Three.js, and WebGL for interfaces with fluid motion and visual impact."
-          },
-          {
-            "title": "Cross-platform Development",
-            "description": "Experience with Flutter and Dart to create mobile and web applications from a single codebase, delivering high-quality native experiences across multiple platforms."
-          }
-        ]
-      },
-      {
-        "id": "fullstack-skills",
-        "title": "Complementary Skills",
-        "description": "Additional technical capabilities that allow me to approach projects holistically as a fullstack developer.",
-        "features": [
-          {
-            "title": "Web UI/UX Design",
-            "description": "User-centered design skills, wireframing, and prototyping with Figma, creating usable and attractive experiences."
-          },
-          {
-            "title": "Backend & Databases",
-            "description": "Development of APIs and services with Node.js, Express, and SQL/NoSQL database management to create complete fullstack solutions."
-          },
-          {
-            "title": "DevOps & Cloud",
-            "description": "Experience with Azure DevOps, GCloud, Docker, and CI/CD to automate processes and manage infrastructure in cloud environments."
-          }
-        ]
-      }
-    ]
-  },
+  "title": "What I Can Do For You",
+  "subtitle": "Solutions tailored to your business needs",
+  "solutions": [
+    {
+      "id": "frontend-development",
+      "title": "Beautiful Websites & Apps",
+      "description": "I create stunning, user-friendly websites and applications that work perfectly on all devices and load quickly.",
+      "features": [
+        {
+          "title": "Modern Web Experiences",
+          "description": "I build websites that not only look great but also perform exceptionally well, ensuring your visitors have a smooth and enjoyable experience."
+        },
+        {
+          "title": "Engaging Animations & Effects",
+          "description": "I add life to your digital presence with smooth animations and visual effects that capture attention and guide users through your content."
+        },
+        {
+          "title": "Web Applications",
+          "description": "I develop web applications that work seamlessly across phones, tablets, and computers, giving your users a consistent experience no matter what device they use."
+        }
+      ]
+    },
+    {
+      "id": "fullstack-skills",
+      "title": "Complete Digital Solutions",
+      "description": "I offer end-to-end services that cover everything you need for a successful digital project.",
+      "features": [
+        {
+          "title": "User-Centered Design",
+          "description": "I create designs that are not only visually appealing but also intuitive and easy to use, focusing on what your users really need."
+        },
+        {
+          "title": "Powerful Behind-the-Scenes Systems",
+          "description": "I build the technology that powers your website or app, including databases and systems that manage your content and user interactions."
+        },
+        {
+          "title": "Reliable Hosting & Maintenance",
+          "description": "I ensure your digital products are securely hosted, regularly updated, and optimized to run smoothly at all times."
+        }
+      ]
+    }
+  ]
+},
   "workExperience": {
     "title": "Professional Background",
     "subtitle": "Where I've developed my career",
