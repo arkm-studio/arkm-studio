@@ -91,36 +91,182 @@
     margin: 0 auto;
   }
 
-  // Featured image with dots (reemplazo de thumbnails)
+  // Advanced image slider with smaller images on sides
   &__featured-image-container {
     @include flex($direction: column, $justify: center, $gap: $spacing-md);
     min-height: 100vh;
     width: 100%;
   }
 
-  &__featured-image {
-    position: relative;
+  // Advanced slider container
+  &__advanced-slider {
+    @include flex($align: center, $justify: center);
     width: 100%;
-    height: 450px;
-    border-radius: $border-radius-md;
-    overflow: hidden;
-    @include elevation(2);
+    position: relative;
+    margin: 0 auto;
+    height: 500px;
 
     @include tablet {
-      height: 400px;
+      height: 450px;
     }
 
     @include mobile {
-      height: 300px;
+      height: 350px;
+      flex-direction: column;
     }
   }
 
-  &__image {
-    object-fit: contain;
+  // Slider navigation buttons
+  &__slider-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba($black-dark, 0.7);
+    border: 1px solid rgba($white-base, 0.1);
+    color: $white-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include transition(all, 0.3s);
+    backdrop-filter: blur(5px);
+    font-size: 1.25rem;
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: rgba($primary-color, 0.8);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 15px rgba($primary-color, 0.4);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  }
+
+  // Slider container for all images
+  &__slider-container {
+    @include flex($align: center, $justify: center);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  // Individual slider items
+  &__slider-item {
+    position: absolute;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    @include transition(all, 0.5s);
+    @include elevation(2);
+
+    // Current (main) image
+    &--current {
+      width: 70%;
+      height: 450px;
+      z-index: 5;
+
+      @include tablet {
+        width: 75%;
+        height: 400px;
+      }
+
+      @include mobile {
+        width: 90%;
+        height: 300px;
+      }
+    }
+
+    // Previous image (smaller, left side)
+    &--prev {
+      width: 40%;
+      height: 350px;
+      z-index: 2;
+      left: 0;
+      transform: translateX(10%) scale(0.85);
+      filter: brightness(0.7);
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(12%) scale(0.87);
+        filter: brightness(0.85);
+      }
+
+      @include tablet {
+        width: 35%;
+        height: 300px;
+        transform: translateX(15%) scale(0.8);
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    // Next image (smaller, right side)
+    &--next {
+      width: 40%;
+      height: 350px;
+      z-index: 2;
+      right: 0;
+      transform: translateX(-10%) scale(0.85);
+      filter: brightness(0.7);
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(-12%) scale(0.87);
+        filter: brightness(0.85);
+      }
+
+      @include tablet {
+        width: 35%;
+        height: 300px;
+        transform: translateX(-15%) scale(0.8);
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  // Image wrapper inside slider items
+  &__slider-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  // Images inside the slider
+  &__slider-image {
+    object-fit: cover;
     object-position: center;
     border-radius: $border-radius-md;
-
     @include transition(transform, 0.5s);
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   &__image-overlay {
@@ -138,24 +284,27 @@
     z-index: 1;
   }
 
-  // Nuevos estilos para los dots (reemplazo de las miniaturas)
+  // Enhanced dots slider for the advanced slider
   &__dots-slider {
     @include flex($gap: $spacing-md, $justify: center);
     padding: $spacing-md 0;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 
   &__dot {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: rgba($white-base, 0.15);
     cursor: pointer;
     @include transition(all, 0.3s);
     border: 2px solid transparent;
     position: relative;
+    margin: 0 3px;
 
     &:hover {
       background-color: rgba($primary-color, 0.5);
@@ -181,8 +330,8 @@
     }
 
     @include mobile {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
     }
   }
 
