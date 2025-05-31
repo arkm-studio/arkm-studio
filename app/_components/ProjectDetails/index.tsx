@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import classNames from "classnames/bind";
 import { Typography } from "@/app/_components/Typography";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./ProjectDetails.module.scss";
 import { Button } from "../Button";
 import { useRouter } from "next/navigation";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const cx = classNames.bind(styles);
 
@@ -69,14 +70,52 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   expertiseLabel = "EXPERTISE",
   technologyLabel = "TECHNOLOGY",
 }) => {
-  // For the featured image carousel
-  const [currentImage, setCurrentImage] = useState(images.featured);
+  // For the advanced image slider
   const allImages = [images.featured, ...images.gallery];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
   const router = useRouter();
+  
+  // Get the current image and adjacent images for the slider
+  const currentImage = allImages[currentIndex];
+  const prevIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+  const nextIndex = (currentIndex + 1) % allImages.length;
+  const prevImage = allImages[prevIndex];
+  const nextImage = allImages[nextIndex];
 
   const handleNavigateToWork = () => {
     router.push(projectUrl);
   };
+
+  // Handle navigation between images
+  const goToNextSlide = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length);
+    setTimeout(() => setIsAnimating(false), 500);
+  };
+
+  const goToPrevSlide = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + allImages.length) % allImages.length);
+    setTimeout(() => setIsAnimating(false), 500);
+  };
+
+  const goToSlide = (index: number) => {
+    if (isAnimating || index === currentIndex) return;
+    setIsAnimating(true);
+    setCurrentIndex(index);
+    setTimeout(() => setIsAnimating(false), 500);
+  };
+
+  // Auto-rotate slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -133,26 +172,87 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
               className={cx("project-details__featured-image-container")}
               variants={itemVariants}
             >
-              <div className={cx("project-details__featured-image")}>
-                <Image
-                  src={currentImage}
-                  alt={`${title} featured image`}
-                  fill
-                  className={cx("project-details__image")}
-                  priority
-                />
-                <div className={cx("project-details__image-overlay")}></div>
+              <div className={cx("project-details__advanced-slider")}>                
+                {/* Navigation buttons */}
+                <button 
+                  className={cx("project-details__slider-nav", "project-details__slider-nav--prev")} 
+                  onClick={goToPrevSlide}
+                  aria-label="Previous image"
+                  disabled={isAnimating}
+                >
+                  <FiChevronLeft />
+                </button>
+                
+                <div className={cx("project-details__slider-container")}>                  
+                  {/* Previous image (smaller) */}
+                  <div className={cx("project-details__slider-item", "project-details__slider-item--prev")}>
+                    <div className={cx("project-details__slider-image-wrapper")}>
+                      <Image
+                        src={prevImage}
+                        alt={`${title} previous image`}
+                        fill
+                        className={cx("project-details__slider-image")}
+                      />
+                      <div className={cx("project-details__image-overlay")}></div>
+                    </div>
+                  </div>
+                  
+                  {/* Current image (main) */}
+                  <AnimatePresence mode="wait">
+                    <motion.div 
+                      key={currentIndex}
+                      className={cx("project-details__slider-item", "project-details__slider-item--current")}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                    >
+                      <div className={cx("project-details__slider-image-wrapper")}>
+                        <Image
+                          src={currentImage}
+                          alt={`${title} featured image`}
+                          fill
+                          className={cx("project-details__slider-image")}
+                          priority
+                        />
+                        <div className={cx("project-details__image-overlay")}></div>
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+                  
+                  {/* Next image (smaller) */}
+                  <div className={cx("project-details__slider-item", "project-details__slider-item--next")}>
+                    <div className={cx("project-details__slider-image-wrapper")}>
+                      <Image
+                        src={nextImage}
+                        alt={`${title} next image`}
+                        fill
+                        className={cx("project-details__slider-image")}
+                      />
+                      <div className={cx("project-details__image-overlay")}></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <button 
+                  className={cx("project-details__slider-nav", "project-details__slider-nav--next")} 
+                  onClick={goToNextSlide}
+                  aria-label="Next image"
+                  disabled={isAnimating}
+                >
+                  <FiChevronRight />
+                </button>
               </div>
-
-              {/* Reemplazo de las miniaturas por dots */}
+              
+              {/* Dots indicator */}
               <div className={cx("project-details__dots-slider")}>
                 {allImages.map((image, index) => (
                   <div
                     key={index}
                     className={cx("project-details__dot", {
-                      "project-details__dot--active": image === currentImage,
+                      "project-details__dot--active": index === currentIndex,
                     })}
-                    onClick={() => setCurrentImage(image)}
+                    onClick={() => goToSlide(index)}
                     aria-label={`Ver imagen ${index + 1}`}
                   />
                 ))}
